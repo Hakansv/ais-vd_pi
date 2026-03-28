@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-22 17:46+0200\n"
-"PO-Revision-Date: 2022-05-30 12:09\n"
+"PO-Revision-Date: 2026-02-13 20:43\n"
 "Last-Translator: \n"
 "Language-Team: Norwegian Bokmal\n"
 "Language: nb_NO\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: src\ais-vd_pi.cpp:191
 msgid "ais-vd_pi Preferences"
-msgstr ""
+msgstr "ais-vd_pi innstillinger"
 
 #: src\ais-vd_pi.cpp:260
 msgid "AIS Voyage data"
@@ -115,15 +115,15 @@ msgstr "Dra ned for å velge"
 
 #: src\ais-vd_pi.cpp:629
 msgid "Yet no answer from any AIS!"
-msgstr ""
+msgstr "Enda ingen svar fra noen AIS!"
 
 #: src\ais-vd_pi.cpp:630
 msgid "Please check OCPN connections and AIS cabling."
-msgstr ""
+msgstr "Vennligst kontroller OCPN-tilkoblinger og AIS-kabling."
 
 #: src\ais-vd_pi.cpp:631
 msgid "See Preferences for more info."
-msgstr ""
+msgstr "Se Innstillinger for mer info."
 
 #: src\ais-vd_pi.cpp:660
 msgid "Reply from AIS"
@@ -147,27 +147,27 @@ msgstr "Tid"
 
 #: src\ais-vd_pi.cpp:742
 msgid "Plugin version: "
-msgstr ""
+msgstr "Plugin versjon:"
 
 #: src\ais-vd_pi.cpp:746
 msgid "OpenCPN connections help:"
-msgstr ""
+msgstr "Hjelp for OpenCPN tilkoblinger:"
 
 #: src\ais-vd_pi.cpp:748
 msgid "You need both input and output connections for the AIS device."
-msgstr ""
+msgstr "Du trenger tilkobling til både inn- og utdata for AIS-enheten."
 
 #: src\ais-vd_pi.cpp:749
 msgid "To minimize traffic, connection filters may be feasible:"
-msgstr ""
+msgstr "For å minimere trafikken kan tilkoblingsfiltre brukes:"
 
 #: src\ais-vd_pi.cpp:750
 msgid "For the output filter transmit only VSD and AIQ"
-msgstr ""
+msgstr "For utgangs-filteret, send bare VSD og AIQ"
 
 #: src\ais-vd_pi.cpp:751
 msgid "For a possible input filter we need at least VSD (and AIVDM + GNSS?)"
-msgstr ""
+msgstr "For et mulig ingangsfilter trenger vi minst VSD (og AIVDM + GNSS?)"
 
 #: src\ais-vd_pi.cpp:846
 msgid "Wing in ground (WIG)"

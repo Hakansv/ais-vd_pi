@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-22 17:46+0200\n"
-"PO-Revision-Date: 2022-05-30 12:09\n"
+"PO-Revision-Date: 2023-10-04 18:33\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: src\ais-vd_pi.cpp:191
 msgid "ais-vd_pi Preferences"
-msgstr ""
+msgstr "ais-vd_pi beállítások"
 
 #: src\ais-vd_pi.cpp:260
 msgid "AIS Voyage data"
@@ -115,15 +115,15 @@ msgstr "Nyisd le a választáshoz"
 
 #: src\ais-vd_pi.cpp:629
 msgid "Yet no answer from any AIS!"
-msgstr ""
+msgstr "Még nincs válasz egyik AIS-től sem!"
 
 #: src\ais-vd_pi.cpp:630
 msgid "Please check OCPN connections and AIS cabling."
-msgstr ""
+msgstr "Ellenőrizd az OpenCPN capcsolatokat és az AIS kábelezést!"
 
 #: src\ais-vd_pi.cpp:631
 msgid "See Preferences for more info."
-msgstr ""
+msgstr "Lásd a Beállításokat további információért."
 
 #: src\ais-vd_pi.cpp:660
 msgid "Reply from AIS"
@@ -147,27 +147,27 @@ msgstr "Idő"
 
 #: src\ais-vd_pi.cpp:742
 msgid "Plugin version: "
-msgstr ""
+msgstr "Plugin verzió: "
 
 #: src\ais-vd_pi.cpp:746
 msgid "OpenCPN connections help:"
-msgstr ""
+msgstr "OpenCPN kapcsolatok súgó:"
 
 #: src\ais-vd_pi.cpp:748
 msgid "You need both input and output connections for the AIS device."
-msgstr ""
+msgstr "Az AIS eszközhöz.input és az output kapcsolatra is szükség van."
 
 #: src\ais-vd_pi.cpp:749
 msgid "To minimize traffic, connection filters may be feasible:"
-msgstr ""
+msgstr "A forgalom minimalizálására szűrők lehetségesek."
 
 #: src\ais-vd_pi.cpp:750
 msgid "For the output filter transmit only VSD and AIQ"
-msgstr ""
+msgstr "Az output szürőhöz csak VSD és AIQ üzenetet adj."
 
 #: src\ais-vd_pi.cpp:751
 msgid "For a possible input filter we need at least VSD (and AIVDM + GNSS?)"
-msgstr ""
+msgstr "A lehetséges input szűrőhöz legalább VSD (és AIVDM + GNSS?) üzenet kell."
 
 #: src\ais-vd_pi.cpp:846
 msgid "Wing in ground (WIG)"

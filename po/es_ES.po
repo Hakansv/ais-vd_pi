@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-22 17:46+0200\n"
-"PO-Revision-Date: 2022-05-30 12:09\n"
+"PO-Revision-Date: 2026-03-19 13:53\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -43,7 +43,7 @@ msgstr "Fondeado"
 
 #: src\ais-vd_pi.cpp:280
 msgid "Not under command"
-msgstr "Sin Control"
+msgstr "Sin gobierno"
 
 #: src\ais-vd_pi.cpp:281
 msgid "Restricted manoeuverability"
@@ -51,11 +51,11 @@ msgstr "Maniobrabilidad Restringida"
 
 #: src\ais-vd_pi.cpp:282
 msgid "Constrained by draught"
-msgstr "Limitación por calado"
+msgstr "Restringido por calado"
 
 #: src\ais-vd_pi.cpp:283
 msgid "Moored"
-msgstr "Amarrado"
+msgstr "Atracado"
 
 #: src\ais-vd_pi.cpp:284
 msgid "Aground"

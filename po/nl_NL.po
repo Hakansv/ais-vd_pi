@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-22 17:46+0200\n"
-"PO-Revision-Date: 2022-05-30 12:09\n"
+"PO-Revision-Date: 2026-02-13 20:43\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
@@ -19,233 +19,233 @@ msgstr ""
 
 #: src\ais-vd_pi.cpp:191
 msgid "ais-vd_pi Preferences"
-msgstr ""
+msgstr "Voorkeuren"
 
 #: src\ais-vd_pi.cpp:260
 msgid "AIS Voyage data"
-msgstr ""
+msgstr "AIS Reis gegevens"
 
 #: src\ais-vd_pi.cpp:267
 msgid "Set static voyage data on the AIS class A"
-msgstr ""
+msgstr "Statische reisgegevens instellen op de AIS klasse A"
 
 #: src\ais-vd_pi.cpp:275
 msgid "Navigational status"
-msgstr ""
+msgstr "Navigatie status"
 
 #: src\ais-vd_pi.cpp:278
 msgid "Underway using engine"
-msgstr ""
+msgstr "Motorvaart"
 
 #: src\ais-vd_pi.cpp:279
 msgid "At anchor"
-msgstr ""
+msgstr "Voor anker"
 
 #: src\ais-vd_pi.cpp:280
 msgid "Not under command"
-msgstr ""
+msgstr "Onmanoeuvreerbaar"
 
 #: src\ais-vd_pi.cpp:281
 msgid "Restricted manoeuverability"
-msgstr ""
+msgstr "Beperkt manoeuvreerbaar"
 
 #: src\ais-vd_pi.cpp:282
 msgid "Constrained by draught"
-msgstr ""
+msgstr "Beperkt door diepgang"
 
 #: src\ais-vd_pi.cpp:283
 msgid "Moored"
-msgstr ""
+msgstr "Afgemeerd"
 
 #: src\ais-vd_pi.cpp:284
 msgid "Aground"
-msgstr ""
+msgstr "Aan de grond"
 
 #: src\ais-vd_pi.cpp:285
 msgid "Engaged in Fishing"
-msgstr ""
+msgstr "Bezig met vissen"
 
 #: src\ais-vd_pi.cpp:286
 msgid "Under way sailing"
-msgstr ""
+msgstr "Onder zeil"
 
 #: src\ais-vd_pi.cpp:298
 msgid "Enter destination"
-msgstr ""
+msgstr "Voer bestemming in"
 
 #: src\ais-vd_pi.cpp:305
 msgid "or select a previous used"
-msgstr ""
+msgstr "of selecteer een eerder gebruikte"
 
 #: src\ais-vd_pi.cpp:325
 msgid "Draught (m)"
-msgstr ""
+msgstr "Diepgang (m)"
 
 #: src\ais-vd_pi.cpp:338
 msgid "No. of Persons onboard"
-msgstr ""
+msgstr "Aantal personen aan boord"
 
 #: src\ais-vd_pi.cpp:350
 msgid "E.T.A. Date and Time"
-msgstr ""
+msgstr "Verwachte aankomsttijd"
 
 #: src\ais-vd_pi.cpp:362 src\ais-vd_pi.cpp:687
 msgid "Month"
-msgstr ""
+msgstr "Maand"
 
 #: src\ais-vd_pi.cpp:372 src\ais-vd_pi.cpp:688
 msgid "Day"
-msgstr ""
+msgstr "Dag"
 
 #: src\ais-vd_pi.cpp:382
 msgid "Hour (UTC)"
-msgstr ""
+msgstr "Uur (UTC)"
 
 #: src\ais-vd_pi.cpp:393
 msgid "Minute"
-msgstr ""
+msgstr "Minuut;"
 
 #: src\ais-vd_pi.cpp:420 src\ais-vd_pi.cpp:709
 msgid "Send to AIS"
-msgstr ""
+msgstr "Verzend naar GPS"
 
 #: src\ais-vd_pi.cpp:431
 msgid "Drop down to select"
-msgstr ""
+msgstr "Sleep naar beneden om te selecteren"
 
 #: src\ais-vd_pi.cpp:629
 msgid "Yet no answer from any AIS!"
-msgstr ""
+msgstr "Momenteel geen enkel antwoord van AIS! "
 
 #: src\ais-vd_pi.cpp:630
 msgid "Please check OCPN connections and AIS cabling."
-msgstr ""
+msgstr "Controleer de OCPN-verbindingen en de AIS-kabel."
 
 #: src\ais-vd_pi.cpp:631
 msgid "See Preferences for more info."
-msgstr ""
+msgstr "Zie voorkeuren voor meer informatie."
 
 #: src\ais-vd_pi.cpp:660
 msgid "Reply from AIS"
-msgstr ""
+msgstr "Antwoord van AIS"
 
 #: src\ais-vd_pi.cpp:680
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: src\ais-vd_pi.cpp:685
 msgid "Dest"
-msgstr ""
+msgstr "Bestemming"
 
 #: src\ais-vd_pi.cpp:686
 msgid "ETA"
-msgstr ""
+msgstr "ETA"
 
 #: src\ais-vd_pi.cpp:691
 msgid "Time"
-msgstr ""
+msgstr "Tijd"
 
 #: src\ais-vd_pi.cpp:742
 msgid "Plugin version: "
-msgstr ""
+msgstr "Plugin versie:"
 
 #: src\ais-vd_pi.cpp:746
 msgid "OpenCPN connections help:"
-msgstr ""
+msgstr "OpenCPN verbinding hulp:"
 
 #: src\ais-vd_pi.cpp:748
 msgid "You need both input and output connections for the AIS device."
-msgstr ""
+msgstr "U heeft zowel invoer- als uitvoerverbindingen nodig voor het AIS-apparaat."
 
 #: src\ais-vd_pi.cpp:749
 msgid "To minimize traffic, connection filters may be feasible:"
-msgstr ""
+msgstr "Om het verkeer te minimaliseren, zijn verbindingsfilters mogelijk:"
 
 #: src\ais-vd_pi.cpp:750
 msgid "For the output filter transmit only VSD and AIQ"
-msgstr ""
+msgstr "Voor het uitvoer filter zendt alleen VSD en AIQ"
 
 #: src\ais-vd_pi.cpp:751
 msgid "For a possible input filter we need at least VSD (and AIVDM + GNSS?)"
-msgstr ""
+msgstr "Voor het invoerfilter hebben we ten minste VSD (en AIVDM + GNSS?) nodig"
 
 #: src\ais-vd_pi.cpp:846
 msgid "Wing in ground (WIG)"
-msgstr ""
+msgstr "Wing in ground (WIG)"
 
 #: src\ais-vd_pi.cpp:847
 msgid "Fishing"
-msgstr ""
+msgstr "Visserij"
 
 #: src\ais-vd_pi.cpp:848
 msgid "Towing"
-msgstr ""
+msgstr "Slepend"
 
 #: src\ais-vd_pi.cpp:849
 msgid "Towing (Long)"
-msgstr ""
+msgstr "Slepend (lang)"
 
 #: src\ais-vd_pi.cpp:850
 msgid "Dredging or underwater ops"
-msgstr ""
+msgstr "Baggeren of onderwaterwerkzaamheden"
 
 #: src\ais-vd_pi.cpp:851
 msgid "Diving ops"
-msgstr ""
+msgstr "Duik werkzaamheden"
 
 #: src\ais-vd_pi.cpp:852
 msgid "Military ops"
-msgstr ""
+msgstr "Militaire operaties"
 
 #: src\ais-vd_pi.cpp:853
 msgid "Sailing vessel"
-msgstr ""
+msgstr "Zeilschip"
 
 #: src\ais-vd_pi.cpp:854
 msgid "Pleasure Craft"
-msgstr ""
+msgstr "Pleziervaartuig"
 
 #: src\ais-vd_pi.cpp:859
 msgid "High speed craft (HSC)"
-msgstr ""
+msgstr "Hogesnelheidsvaartuig (HSC)"
 
 #: src\ais-vd_pi.cpp:860
 msgid "Pilot Vessel"
-msgstr ""
+msgstr "Loodsvaartuig"
 
 #: src\ais-vd_pi.cpp:861
 msgid "Search and Rescue vessel"
-msgstr ""
+msgstr "Reddingsvaartuig"
 
 #: src\ais-vd_pi.cpp:862
 msgid "Tug"
-msgstr ""
+msgstr "Sleepboot"
 
 #: src\ais-vd_pi.cpp:863
 msgid "Port Tender"
-msgstr ""
+msgstr "Havendienstvaartuig"
 
 #: src\ais-vd_pi.cpp:864
 msgid "Law Enforcement"
-msgstr ""
+msgstr "Wetshandhavingsvaartuig"
 
 #: src\ais-vd_pi.cpp:865
 msgid "Medical Transport"
-msgstr ""
+msgstr "Hospitaalschip"
 
 #: src\ais-vd_pi.cpp:870
 msgid "Passenger ship"
-msgstr ""
+msgstr "Passagiersschip"
 
 #: src\ais-vd_pi.cpp:876
 msgid "Cargo ship"
-msgstr ""
+msgstr "Vrachtschip"
 
 #: src\ais-vd_pi.cpp:881
 msgid "Tanker"
-msgstr ""
+msgstr "Tanker"
 
 #: src\ais-vd_pi.cpp:882
 msgid "Other"
-msgstr ""
+msgstr "Overige"
 

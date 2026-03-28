@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-22 17:46+0200\n"
-"PO-Revision-Date: 2022-05-30 12:09\n"
+"PO-Revision-Date: 2025-05-20 02:02\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: src\ais-vd_pi.cpp:191
 msgid "ais-vd_pi Preferences"
-msgstr ""
+msgstr "Προτιμήσεις ais-vd_pi"
 
 #: src\ais-vd_pi.cpp:260
 msgid "AIS Voyage data"
@@ -87,7 +87,7 @@ msgstr "Αρ. επιβαινόντων"
 
 #: src\ais-vd_pi.cpp:350
 msgid "E.T.A. Date and Time"
-msgstr ""
+msgstr "ΕΤΑ ημερομηνία και ώρα "
 
 #: src\ais-vd_pi.cpp:362 src\ais-vd_pi.cpp:687
 msgid "Month"
@@ -99,7 +99,7 @@ msgstr "Ημέρα"
 
 #: src\ais-vd_pi.cpp:382
 msgid "Hour (UTC)"
-msgstr ""
+msgstr "Ώρα (UTC)"
 
 #: src\ais-vd_pi.cpp:393
 msgid "Minute"
@@ -115,15 +115,15 @@ msgstr "Ανοίξτε για επιλογή"
 
 #: src\ais-vd_pi.cpp:629
 msgid "Yet no answer from any AIS!"
-msgstr ""
+msgstr "Καμία ανταπόκριση AIS"
 
 #: src\ais-vd_pi.cpp:630
 msgid "Please check OCPN connections and AIS cabling."
-msgstr ""
+msgstr "Ελέγξτε τις συνδέσεις OCPN και την καλωδίωση AIS."
 
 #: src\ais-vd_pi.cpp:631
 msgid "See Preferences for more info."
-msgstr ""
+msgstr "Δείτε τις Προτιμήσεις για περισσότερες πληροφορίες."
 
 #: src\ais-vd_pi.cpp:660
 msgid "Reply from AIS"
@@ -147,27 +147,27 @@ msgstr "Ώρα"
 
 #: src\ais-vd_pi.cpp:742
 msgid "Plugin version: "
-msgstr ""
+msgstr "Εκδοσή πρόσθετου : "
 
 #: src\ais-vd_pi.cpp:746
 msgid "OpenCPN connections help:"
-msgstr ""
+msgstr "Βοήθεια για συνδέσεις OpenCPN"
 
 #: src\ais-vd_pi.cpp:748
 msgid "You need both input and output connections for the AIS device."
-msgstr ""
+msgstr "Χρειάζεστε συνδέσεις εισόδου και εξόδου για τη συσκευή AIS."
 
 #: src\ais-vd_pi.cpp:749
 msgid "To minimize traffic, connection filters may be feasible:"
-msgstr ""
+msgstr "Για ελαχιστοποίηση κυκλοφορίας, τα φίλτρα σύνδεσης μπορεί να είναι:"
 
 #: src\ais-vd_pi.cpp:750
 msgid "For the output filter transmit only VSD and AIQ"
-msgstr ""
+msgstr "Για το φίλτρο εξόδου μετάδοση μόνο VSD και AIQ"
 
 #: src\ais-vd_pi.cpp:751
 msgid "For a possible input filter we need at least VSD (and AIVDM + GNSS?)"
-msgstr ""
+msgstr "Για το φίλτρο εισόδου χρειαζόμαστε τουλάχιστον VSD (και AIVDM + GNSS?)"
 
 #: src\ais-vd_pi.cpp:846
 msgid "Wing in ground (WIG)"

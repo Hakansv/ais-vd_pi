@@ -3,249 +3,249 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-22 17:46+0200\n"
-"PO-Revision-Date: 2026-03-26 17:45\n"
+"PO-Revision-Date: 2025-03-28 07:01\n"
 "Last-Translator: \n"
-"Language-Team: Russian\n"
-"Language: ru_RU\n"
+"Language-Team: Spanish (Modern)\n"
+"Language: es_EM\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: opencpn\n"
 "X-Crowdin-Project-ID: 49843\n"
-"X-Crowdin-Language: ru\n"
+"X-Crowdin-Language: es-EM\n"
 "X-Crowdin-File: /plugins/ais-vd_pi/po/ais-vd_pi.pot\n"
 "X-Crowdin-File-ID: 377\n"
 
 #: src\ais-vd_pi.cpp:191
 msgid "ais-vd_pi Preferences"
-msgstr ""
+msgstr "crwdns24840:0crwdne24840:0"
 
 #: src\ais-vd_pi.cpp:260
 msgid "AIS Voyage data"
-msgstr "АИС данные о маршруте"
+msgstr "crwdns24453:0crwdne24453:0"
 
 #: src\ais-vd_pi.cpp:267
 msgid "Set static voyage data on the AIS class A"
-msgstr ""
+msgstr "crwdns24455:0crwdne24455:0"
 
 #: src\ais-vd_pi.cpp:275
 msgid "Navigational status"
-msgstr "Навигационный статус"
+msgstr "crwdns24457:0crwdne24457:0"
 
 #: src\ais-vd_pi.cpp:278
 msgid "Underway using engine"
-msgstr "На ходу под двигателем"
+msgstr "crwdns24459:0crwdne24459:0"
 
 #: src\ais-vd_pi.cpp:279
 msgid "At anchor"
-msgstr "На якоре"
+msgstr "crwdns24461:0crwdne24461:0"
 
 #: src\ais-vd_pi.cpp:280
 msgid "Not under command"
-msgstr "Не управляется"
+msgstr "crwdns24463:0crwdne24463:0"
 
 #: src\ais-vd_pi.cpp:281
 msgid "Restricted manoeuverability"
-msgstr "Ограничено в маневрах"
+msgstr "crwdns24465:0crwdne24465:0"
 
 #: src\ais-vd_pi.cpp:282
 msgid "Constrained by draught"
-msgstr "Ограничено осадкой"
+msgstr "crwdns24467:0crwdne24467:0"
 
 #: src\ais-vd_pi.cpp:283
 msgid "Moored"
-msgstr "Пришвартовано"
+msgstr "crwdns24469:0crwdne24469:0"
 
 #: src\ais-vd_pi.cpp:284
 msgid "Aground"
-msgstr "На мели"
+msgstr "crwdns24471:0crwdne24471:0"
 
 #: src\ais-vd_pi.cpp:285
 msgid "Engaged in Fishing"
-msgstr "Ведет лов рыбы"
+msgstr "crwdns24473:0crwdne24473:0"
 
 #: src\ais-vd_pi.cpp:286
 msgid "Under way sailing"
-msgstr "На ходу"
+msgstr "crwdns24475:0crwdne24475:0"
 
 #: src\ais-vd_pi.cpp:298
 msgid "Enter destination"
-msgstr "Введите пункт назначения"
+msgstr "crwdns24477:0crwdne24477:0"
 
 #: src\ais-vd_pi.cpp:305
 msgid "or select a previous used"
-msgstr "или выберите предыдущий"
+msgstr "crwdns24522:0crwdne24522:0"
 
 #: src\ais-vd_pi.cpp:325
 msgid "Draught (m)"
-msgstr "Осадка (м)"
+msgstr "crwdns24481:0crwdne24481:0"
 
 #: src\ais-vd_pi.cpp:338
 msgid "No. of Persons onboard"
-msgstr "Число людей на борту"
+msgstr "crwdns24483:0crwdne24483:0"
 
 #: src\ais-vd_pi.cpp:350
 msgid "E.T.A. Date and Time"
-msgstr "Ожидаемые дата и время прибытия"
+msgstr "crwdns24580:0crwdne24580:0"
 
 #: src\ais-vd_pi.cpp:362 src\ais-vd_pi.cpp:687
 msgid "Month"
-msgstr "Месяц"
+msgstr "crwdns24451:0crwdne24451:0"
 
 #: src\ais-vd_pi.cpp:372 src\ais-vd_pi.cpp:688
 msgid "Day"
-msgstr "День"
+msgstr "crwdns24449:0crwdne24449:0"
 
 #: src\ais-vd_pi.cpp:382
 msgid "Hour (UTC)"
-msgstr "Час (UTC)"
+msgstr "crwdns24582:0crwdne24582:0"
 
 #: src\ais-vd_pi.cpp:393
 msgid "Minute"
-msgstr "Минуты"
+msgstr "crwdns24530:0crwdne24530:0"
 
 #: src\ais-vd_pi.cpp:420 src\ais-vd_pi.cpp:709
 msgid "Send to AIS"
-msgstr "Отправить в АИС"
+msgstr "crwdns24489:0crwdne24489:0"
 
 #: src\ais-vd_pi.cpp:431
 msgid "Drop down to select"
-msgstr "Разверните список выбора"
+msgstr "crwdns24532:0crwdne24532:0"
 
 #: src\ais-vd_pi.cpp:629
 msgid "Yet no answer from any AIS!"
-msgstr "Нет соединения с АИС!"
+msgstr "crwdns24842:0crwdne24842:0"
 
 #: src\ais-vd_pi.cpp:630
 msgid "Please check OCPN connections and AIS cabling."
-msgstr "Проверьте кабельные соединения устройства с OCPN и АИС."
+msgstr "crwdns24844:0crwdne24844:0"
 
 #: src\ais-vd_pi.cpp:631
 msgid "See Preferences for more info."
-msgstr "Дополнительную информацию см. в настройках."
+msgstr "crwdns24846:0crwdne24846:0"
 
 #: src\ais-vd_pi.cpp:660
 msgid "Reply from AIS"
-msgstr "Отклик АИС"
+msgstr "crwdns24536:0crwdne24536:0"
 
 #: src\ais-vd_pi.cpp:680
 msgid "Status"
-msgstr "Статус"
+msgstr "crwdns24443:0crwdne24443:0"
 
 #: src\ais-vd_pi.cpp:685
 msgid "Dest"
-msgstr "Назначение"
+msgstr "crwdns24445:0crwdne24445:0"
 
 #: src\ais-vd_pi.cpp:686
 msgid "ETA"
-msgstr "Ожидаемое время прибытия"
+msgstr "crwdns24538:0crwdne24538:0"
 
 #: src\ais-vd_pi.cpp:691
 msgid "Time"
-msgstr "Время"
+msgstr "crwdns24447:0crwdne24447:0"
 
 #: src\ais-vd_pi.cpp:742
 msgid "Plugin version: "
-msgstr "Версия плагина"
+msgstr "crwdns24848:0crwdne24848:0"
 
 #: src\ais-vd_pi.cpp:746
 msgid "OpenCPN connections help:"
-msgstr "Помощь по подключению OCPN"
+msgstr "crwdns24850:0crwdne24850:0"
 
 #: src\ais-vd_pi.cpp:748
 msgid "You need both input and output connections for the AIS device."
-msgstr "Необходимы входное и выходное соединения с устройством АИС."
+msgstr "crwdns24852:0crwdne24852:0"
 
 #: src\ais-vd_pi.cpp:749
 msgid "To minimize traffic, connection filters may be feasible:"
-msgstr "Для минимизации трафика можно использовать фильтры соединений."
+msgstr "crwdns24854:0crwdne24854:0"
 
 #: src\ais-vd_pi.cpp:750
 msgid "For the output filter transmit only VSD and AIQ"
-msgstr ""
+msgstr "crwdns24856:0crwdne24856:0"
 
 #: src\ais-vd_pi.cpp:751
 msgid "For a possible input filter we need at least VSD (and AIVDM + GNSS?)"
-msgstr ""
+msgstr "crwdns24858:0crwdne24858:0"
 
 #: src\ais-vd_pi.cpp:846
 msgid "Wing in ground (WIG)"
-msgstr ""
+msgstr "crwdns24540:0crwdne24540:0"
 
 #: src\ais-vd_pi.cpp:847
 msgid "Fishing"
-msgstr "Лов рыбы"
+msgstr "crwdns24542:0crwdne24542:0"
 
 #: src\ais-vd_pi.cpp:848
 msgid "Towing"
-msgstr "Буксировка"
+msgstr "crwdns24544:0crwdne24544:0"
 
 #: src\ais-vd_pi.cpp:849
 msgid "Towing (Long)"
-msgstr "Буксировка длинного состава"
+msgstr "crwdns24546:0crwdne24546:0"
 
 #: src\ais-vd_pi.cpp:850
 msgid "Dredging or underwater ops"
-msgstr "Дноуглубительные или подводные работы"
+msgstr "crwdns24548:0crwdne24548:0"
 
 #: src\ais-vd_pi.cpp:851
 msgid "Diving ops"
-msgstr "Работают водолазы"
+msgstr "crwdns24550:0crwdne24550:0"
 
 #: src\ais-vd_pi.cpp:852
 msgid "Military ops"
-msgstr "Военные операции"
+msgstr "crwdns24552:0crwdne24552:0"
 
 #: src\ais-vd_pi.cpp:853
 msgid "Sailing vessel"
-msgstr "Парусное судно"
+msgstr "crwdns24554:0crwdne24554:0"
 
 #: src\ais-vd_pi.cpp:854
 msgid "Pleasure Craft"
-msgstr "Прогулочное судно"
+msgstr "crwdns24556:0crwdne24556:0"
 
 #: src\ais-vd_pi.cpp:859
 msgid "High speed craft (HSC)"
-msgstr "Скоростное судно"
+msgstr "crwdns24558:0crwdne24558:0"
 
 #: src\ais-vd_pi.cpp:860
 msgid "Pilot Vessel"
-msgstr "Лоцманское судно"
+msgstr "crwdns24560:0crwdne24560:0"
 
 #: src\ais-vd_pi.cpp:861
 msgid "Search and Rescue vessel"
-msgstr "Спасательное судно"
+msgstr "crwdns24562:0crwdne24562:0"
 
 #: src\ais-vd_pi.cpp:862
 msgid "Tug"
-msgstr "Буксир"
+msgstr "crwdns24564:0crwdne24564:0"
 
 #: src\ais-vd_pi.cpp:863
 msgid "Port Tender"
-msgstr "Портовое судно"
+msgstr "crwdns24566:0crwdne24566:0"
 
 #: src\ais-vd_pi.cpp:864
 msgid "Law Enforcement"
-msgstr "Правоохранители"
+msgstr "crwdns24568:0crwdne24568:0"
 
 #: src\ais-vd_pi.cpp:865
 msgid "Medical Transport"
-msgstr "Медицинский транспорт"
+msgstr "crwdns24570:0crwdne24570:0"
 
 #: src\ais-vd_pi.cpp:870
 msgid "Passenger ship"
-msgstr "Пассажирское судно"
+msgstr "crwdns24572:0crwdne24572:0"
 
 #: src\ais-vd_pi.cpp:876
 msgid "Cargo ship"
-msgstr "Грузовое судно"
+msgstr "crwdns24574:0crwdne24574:0"
 
 #: src\ais-vd_pi.cpp:881
 msgid "Tanker"
-msgstr "Танкер"
+msgstr "crwdns24576:0crwdne24576:0"
 
 #: src\ais-vd_pi.cpp:882
 msgid "Other"
-msgstr "Прочие суда"
+msgstr "crwdns24578:0crwdne24578:0"
 

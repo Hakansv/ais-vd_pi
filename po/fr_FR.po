@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-22 17:46+0200\n"
-"PO-Revision-Date: 2022-05-30 12:09\n"
+"PO-Revision-Date: 2026-03-19 13:52\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -75,7 +75,7 @@ msgstr "Entrer la destination"
 
 #: src\ais-vd_pi.cpp:305
 msgid "or select a previous used"
-msgstr "ou sélectionnez une utilisation précédente"
+msgstr "ou sélectionnez une destination précédente"
 
 #: src\ais-vd_pi.cpp:325
 msgid "Draught (m)"
@@ -83,7 +83,7 @@ msgstr "Tirant d'eau (m)"
 
 #: src\ais-vd_pi.cpp:338
 msgid "No. of Persons onboard"
-msgstr "Nbre personnes à bord"
+msgstr "Nombre de personnes à bord"
 
 #: src\ais-vd_pi.cpp:350
 msgid "E.T.A. Date and Time"
@@ -207,7 +207,7 @@ msgstr "Navire de plaisance"
 
 #: src\ais-vd_pi.cpp:859
 msgid "High speed craft (HSC)"
-msgstr "Navire à grande vitesse (NVG)"
+msgstr "Navire à grande vitesse (NGV)"
 
 #: src\ais-vd_pi.cpp:860
 msgid "Pilot Vessel"

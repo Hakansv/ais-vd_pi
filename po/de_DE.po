@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-22 17:46+0200\n"
-"PO-Revision-Date: 2022-05-30 12:09\n"
+"PO-Revision-Date: 2026-03-19 13:52\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -199,7 +199,7 @@ msgstr "Militäroperationen"
 
 #: src\ais-vd_pi.cpp:853
 msgid "Sailing vessel"
-msgstr "Segelschiff"
+msgstr "Segelboot"
 
 #: src\ais-vd_pi.cpp:854
 msgid "Pleasure Craft"
