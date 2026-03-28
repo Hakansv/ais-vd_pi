@@ -143,6 +143,8 @@ private:
   wxSpinCtrl *m_pCtrlHour, *m_pCtrlMinute;
   wxButton* m_SendBtn;
   wxButton* m_BtnReadAIS;
+  wxCheckBox* m_cbUseRegionalappl;
+  wxRadioBox* m_rbBlueSignStatus;
 
   wxFileConfig* m_pconfig;
   ////@begin t member function declarations
@@ -163,6 +165,7 @@ private:
   void OnAnyValueChange(wxKeyEvent& event);
   void OnNavStatusSelect(wxCommandEvent& event);
   void OnMonthChange(wxCommandEvent& event);
+  void OnUseBlueSignControl(wxCommandEvent& event);
 
   unsigned char ComputeChecksum(wxString sentence) const;
   /// Retrieves bitmap resources

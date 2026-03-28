@@ -313,6 +313,38 @@ void aisvd_pi::OnSetupOptions(void) {
   PersonsTextCtrl->Bind(wxEVT_CHAR,
                         [&](wxKeyEvent& ev) { OnAnyValueChange(ev); });
 
+  //    Dummy new row
+  wxStaticText* itemStaticText20 = new wxStaticText(m_AIS_VoyDataWin, 
+    wxID_STATIC, _(""),      wxDefaultPosition, wxDefaultSize, 0);
+  itemFlexGridSizer4->Add(itemStaticText20, 0,
+                          wxALIGN_LEFT | wxALIGN_CENTER_VERTICAL | wxALL, 0);
+  wxStaticText* itemStaticText21 =
+      new wxStaticText(m_AIS_VoyDataWin, wxID_STATIC, _(""), wxDefaultPosition,
+                       wxDefaultSize, 0);
+  itemFlexGridSizer4->Add(itemStaticText21, 0,
+                          wxALIGN_LEFT | wxALIGN_CENTER_VERTICAL | wxALL, 0);
+
+  m_cbUseRegionalappl = new wxCheckBox(m_AIS_VoyDataWin, ID_TEXTCTRL2,
+    _("Control Inland Blue Sign"),wxDefaultPosition, wxDefaultSize,0);
+  m_cbUseRegionalappl->SetValue(false);
+  itemFlexGridSizer4->Add(m_cbUseRegionalappl, 0,
+    wxALIGN_LEFT | wxALIGN_CENTER_VERTICAL | wxALL, 5);
+  m_cbUseRegionalappl->Bind(wxEVT_CHECKBOX, [&](wxCommandEvent& ev) { OnUseBlueSignControl(ev); });
+
+  // For now hide the blue sign option.
+  m_cbUseRegionalappl->Show(false);
+
+  wxString m_rbBlueSignOptions[] = {
+      _("Not used"), _("Set not active"), _("Set active")};
+  m_rbBlueSignStatus = new wxRadioBox(
+      m_AIS_VoyDataWin, ID_TEXTCTRL2, (""), wxDefaultPosition,
+      wxDefaultSize, 3, m_rbBlueSignOptions, 0, 0);
+  itemFlexGridSizer4->Add(m_rbBlueSignStatus, 0,
+                          wxALIGN_LEFT | wxALIGN_CENTER_VERTICAL | wxALL, 1);
+  m_rbBlueSignStatus->Show(false);
+  m_rbBlueSignStatus->Bind(wxEVT_RADIOBOX,
+                            [&](wxCommandEvent& ev) { OnAnyValueChange(ev); });
+
   wxStaticBoxSizer* ETAbox = new wxStaticBoxSizer(
       new wxStaticBox(m_AIS_VoyDataWin, wxID_ANY, _("E.T.A. Date and Time")),
       wxVERTICAL);
@@ -581,8 +613,8 @@ void aisvd_pi::SendSentence() {
                             aisvd_pi::m_pCtrlMonth->GetValue()));  // eta Month
   S.Append(wxString::Format(
       _T("%d,"), StatusChoice->GetSelection()));  // Navigation status
-  S.Append(wxString::Format(_T("%d"),
-                            0));  // TODO Regional application flags, 0 to 15
+  if (m_cbUseRegionalappl->GetValue()) // Else NULL: Not change use of local HW
+    S.Append(wxString::Format(_T("%d"), m_rbBlueSignStatus->GetSelection()));
   S.Append(_T("*"));              // End data
   S.Append(wxString::Format(_T("%02X"), ComputeChecksum(S)));
   S += _T("\r\n");
@@ -615,7 +647,7 @@ void aisvd_pi::UpdateDataFromVSD(const wxString& sentence) {
   //     VSD, x.x, x.x, x.x, c c, hhmmss.ss, xx, xx, x.x, x.x*hh
   //           1    2    3    4      5       6    7   8    9
   //  9)Regional application flags, 0 to 15
-  //  8)Regional application flags, 0 to 15
+  //  8)Navigational status
   //  7)Estimated month of arrival at destination, 00 to 12
   //  6)Estimated day of arrival at destination, 00 to 31
   //  5)Estimated UTC of arrival at destination
@@ -629,6 +661,7 @@ void aisvd_pi::UpdateDataFromVSD(const wxString& sentence) {
   msg.Append(
       wxString::Format(_T(" (%02d:%02d) : "), now.GetHour(), now.GetMinute()));
   wxString nmea = sentence.Mid(0, sentence.Len() - 2);
+  nmea.Replace("*", ",");  //   Token fails on "*"
   // Create an understandable user message
   wxString VSD_Nr[11];
   int nr = 0;
@@ -644,19 +677,13 @@ void aisvd_pi::UpdateDataFromVSD(const wxString& sentence) {
 
   int statusNr = wxAtoi(VSD_Nr[8]);
   wxString status = StatusChoiceStrings[statusNr];
-  msg.Append(_("Status") + (": ") + status + " ");
   StatusChoice->SetStringSelection(StatusChoiceStrings[statusNr]);
   // Clean out possible white space complements in destination
   wxString dest = VSD_Nr[4];
   dest.Replace(("  "), wxEmptyString);
-  msg.Append(_("Dest") + (": ") + dest + " \n");
-  msg.Append(_("ETA") + "  ");
-  msg.Append(_("Month") + (": ") + VSD_Nr[7] + " ");
-  msg.Append(_("Day") + (": ") + VSD_Nr[6] + " ");
+  msg.Append("Values in controls are now updated by AIS status");
   wxString hour = VSD_Nr[5].Mid(0, 2);
   wxString minutes = VSD_Nr[5].Mid(2, 2);
-  msg.Append(_("Time") + (": ") + hour + ":" + minutes);
-  // wxLogMessage(msg);
   m_SendBtn->SetLabel(msg);
   // Upptade controls
   m_DestTextCtrl->ChangeValue(dest);
@@ -668,6 +695,7 @@ void aisvd_pi::UpdateDataFromVSD(const wxString& sentence) {
   if (VSD_Nr[3] != _T("0") && VSD_Nr[3] != wxEmptyString) {
     PersonsTextCtrl->ChangeValue(VSD_Nr[3]);
   }
+  m_rbBlueSignStatus->SetSelection(wxAtoi(VSD_Nr[9]));
   SetMaxDay();
   m_AIS_VoyDataWin->Layout();
 }
@@ -805,6 +833,13 @@ void aisvd_pi::OnMonthChange(wxCommandEvent& event) {
 }
 
 void aisvd_pi::OnNavStatusSelect(wxCommandEvent& event) {
+  SetSendBtnLabel();
+  event.Skip();
+}
+
+void aisvd_pi::OnUseBlueSignControl(wxCommandEvent& event) {
+  if (m_cbUseRegionalappl->GetValue()) m_rbBlueSignStatus->Show(true);
+  else m_rbBlueSignStatus->Show(false);
   SetSendBtnLabel();
   event.Skip();
 }
