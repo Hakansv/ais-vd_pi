@@ -46,7 +46,7 @@ function install_wx32() {
   chmod a+w /usr/local/pkg
   repo="https://dl.cloudsmith.io/public/alec-leamas/wxwidgets-32"
   head="deb/debian/pool/bullseye/main"
-  vers="3.2.2+dfsg-1~bpo11+1"
+  vers="3.2.4+dfsg-1~bpo11+1"
   pushd /usr/local/pkg
   wget -q $repo/$head/w/wx/wx-common_${vers}/wx-common_${vers}_armhf.deb
   wget -q $repo/$head/w/wx/wx3.2-i18n_${vers}/wx3.2-i18n_${vers}_all.deb
@@ -80,7 +80,7 @@ apt install -q -y ./opencpn-build-deps*deb
 apt-get -q --allow-unauthenticated install -f
 
 debian_rel=$(lsb_release -sc)
-if [ "$debian_rel" = bookworm ]; then
+if [[ "$debian_rel" = bookworm  || "$debian_rel" = "trixie" ]]; then
     apt-get install -y cmake
 elif [ "$debian_rel" = bullseye ]; then
     echo "deb http://deb.debian.org/debian bullseye-backports main" \
@@ -103,7 +103,7 @@ chown root:root /ci-source
 git config --global --add safe.directory /ci-source
 
 rm -rf build-debian; mkdir build-debian; cd build-debian
-cmake -DCMAKE_BUILD_TYPE=Release -DOCPN_TARGET_TUPLE="@TARGET_TUPLE@" ..
+cmake "-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE:-Release}" -DOCPN_TARGET_TUPLE="@TARGET_TUPLE@" ..
 make -j $(nproc) VERBOSE=1 tarball
 ldd  app/*/lib/opencpn/*.so
 
