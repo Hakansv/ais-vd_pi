@@ -142,7 +142,7 @@ wxString aisvd_pi::GetLongDescription() {
 void PreferenceDlg::HandleAIVSD(ObservedEvt ev) {
   NMEA0183Id id("AIVSD");
   std::string payload = GetN0183Payload(id, ev);
-  m_plugin.UpdateDataFromVSD(wxString::FromUTF8(payload));
+  m_plugin.UpdateDataFromVSD(wxString::FromUTF8(payload.c_str()));
 }
 
 void aisvd_pi::ShowPreferencesDialog(wxWindow* parent) {
@@ -314,7 +314,7 @@ void aisvd_pi::OnSetupOptions(void) {
                         [&](wxKeyEvent& ev) { OnAnyValueChange(ev); });
 
   //    Dummy new row
-  wxStaticText* itemStaticText20 = new wxStaticText(m_AIS_VoyDataWin, 
+  wxStaticText* itemStaticText20 = new wxStaticText(m_AIS_VoyDataWin,
     wxID_STATIC, _(""),      wxDefaultPosition, wxDefaultSize, 0);
   itemFlexGridSizer4->Add(itemStaticText20, 0,
                           wxALIGN_LEFT | wxALIGN_CENTER_VERTICAL | wxALL, 0);
