@@ -84,6 +84,6 @@ macro(add_plugin_libraries)
   #add_subdirectory("libs/observable")
   #target_link_libraries(${PACKAGE_NAME} observable::observable)
 
-  add_subdirectory("opencpn-libs/nmea0183")
-  target_link_libraries(${PACKAGE_NAME} ocpn::nmea0183)
+  #add_subdirectory("opencpn-libs/nmea0183")
+  #target_link_libraries(${PACKAGE_NAME} ocpn::nmea0183)
 endmacro ()
