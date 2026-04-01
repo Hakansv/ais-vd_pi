@@ -77,7 +77,7 @@ aisvd_pi::aisvd_pi(void* ppimgr) : opencpn_plugin_118(ppimgr) {
   // Get and build if necessary a private data dir
   /*g_PrivateDataDir = *GetpPrivateApplicationDataLocation();
   g_PrivateDataDir += wxFileName::GetPathSeparator();
-  g_PrivateDataDir += _T("ais-vd_pi");
+  g_PrivateDataDir += "ais-vd_pi";
   g_PrivateDataDir += wxFileName::GetPathSeparator();
   if (!::wxDirExists(g_PrivateDataDir))
     ::wxMkdir(g_PrivateDataDir);*/
@@ -94,7 +94,7 @@ aisvd_pi::aisvd_pi(void* ppimgr) : opencpn_plugin_118(ppimgr) {
 aisvd_pi::~aisvd_pi() {}
 
 int aisvd_pi::Init(void) {
-  AddLocaleCatalog(_T("opencpn-ais-vd_pi"));
+  AddLocaleCatalog("opencpn-ais-vd_pi");
   return (INSTALLS_TOOLBOX_PAGE | WANTS_PREFERENCES | WANTS_CONFIG);
 }
 
@@ -128,12 +128,11 @@ int aisvd_pi::GetPlugInVersionMinor() { return PLUGIN_VERSION_MINOR; }
 
 wxBitmap* aisvd_pi::GetPlugInBitmap() { return &m_plugin_icon; }
 
-wxString aisvd_pi::GetCommonName() { return _T("ais-vd"); }
+wxString aisvd_pi::GetCommonName() { return "ais-vd"; }
 
-wxString aisvd_pi::GetShortDescription() { return _T("AIS Voyage Data"); }
-
+wxString aisvd_pi::GetShortDescription() { return "AIS Voyage Data"; }
 wxString aisvd_pi::GetLongDescription() {
-  return _T("Set static voyage data to a AIS class A transceiver");
+  return "Set static voyage data to a AIS class A transceiver";
 }
 
 //void aisvd_pi::SetNMEASentence(wxString& sentence) {
@@ -215,7 +214,7 @@ void aisvd_pi::OnSetupOptions(void) {
   m_AIS_VoyDataWin =
       AddOptionsPage(PI_OPTIONS_PARENT_SHIPS, _("AIS Voyage data"));
   if (!m_AIS_VoyDataWin) {
-    wxLogMessage(_T("Error: OnSetupOptions AddOptionsPage failed!"));
+    wxLogMessage("Error: OnSetupOptions AddOptionsPage failed!");
     return;
   }
   if (!prefDlg) {
@@ -411,7 +410,7 @@ void aisvd_pi::OnSetupOptions(void) {
   itemStaticBoxSizer3->Add(itemBoxSizer1, 0, wxGROW | wxALL, 5);
 
   // Read from AIS button
-  m_BtnReadAIS = new wxButton(m_AIS_VoyDataWin, ID_BUTTON, _T("Read from AIS"),
+  m_BtnReadAIS = new wxButton(m_AIS_VoyDataWin, ID_BUTTON, _("Read from AIS"),
                               wxDefaultPosition, wxDefaultSize, 0);
   itemBoxSizer1->Add(m_BtnReadAIS, 0, wxALIGN_CENTER_VERTICAL | wxALL, 5);
   m_BtnReadAIS->Bind(wxEVT_BUTTON,
@@ -453,11 +452,11 @@ bool aisvd_pi::LoadConfig(void) {
 
   if (pConf) {
     wxString temp;
-    pConf->SetPath(_T("/PlugIns/ais-vd"));
-    pConf->Read(_T("Destination"), &m_Destination);
-    pConf->Read(_T("Draught"), &m_Draught, wxEmptyString);
-    pConf->Read(_T("Persons"), &m_Persons, wxEmptyString);
-    pConf->Read(_T("DestSelections"), &m_InitDest);
+    pConf->SetPath("/PlugIns/ais-vd");
+    pConf->Read("Destination", &m_Destination);
+    pConf->Read("Draught", &m_Draught, wxEmptyString);
+    pConf->Read("Persons", &m_Persons, wxEmptyString);
+    pConf->Read("DestSelections", &m_InitDest);
   }
 
   return true;
@@ -467,10 +466,10 @@ bool aisvd_pi::SaveConfig(void) {
   wxFileConfig* pConf = (wxFileConfig*)m_pconfig;
 
   if (pConf) {
-    pConf->SetPath(_T("/PlugIns/ais-vd"));
-    pConf->Write(_T("Destination"), m_Destination);
-    pConf->Write(_T("Draught"), m_Draught);
-    pConf->Write(_T("Persons"), m_Persons);
+    pConf->SetPath("/PlugIns/ais-vd");
+    pConf->Write("Destination", m_Destination);
+    pConf->Write("Draught", m_Draught);
+    pConf->Write("Persons", m_Persons);
     // Save max 18 dest-selections to config.
     if (m_AIS_VoyDataWin) {
       wxString destarr;
@@ -482,7 +481,7 @@ bool aisvd_pi::SaveConfig(void) {
         if (i < size - 1) destarr << ";";
       }
       m_DestComboBox->Select(0);
-      if (size) pConf->Write(_T("DestSelections"), destarr);
+      if (size) pConf->Write("DestSelections", destarr);
     }
   }
   return true;
@@ -531,7 +530,7 @@ void aisvd_pi::UpdatePersons() {
     long temp;
     m_Persons.ToLong(&temp);
     if (temp >= 8100) temp = 8100;
-    m_Persons = wxString::Format(_T("%1d"), temp);
+    m_Persons = wxString::Format("%1d", temp);
     PersonsTextCtrl->ChangeValue(m_Persons);
   }
 }
