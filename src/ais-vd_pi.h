@@ -66,7 +66,7 @@
 #define ID_BUTTON wxID_ANY
 #define ID_BUTTON1 wxID_ANY
 #define SYMBOL_T_STYLE wxCAPTION | wxRESIZE_BORDER | wxSYSTEM_MENU | wxCLOSE_BOX
-#define SYMBOL_T_TITLE _T("t")
+#define SYMBOL_T_TITLE "t"
 #define SYMBOL_T_IDNAME ID_T
 #define SYMBOL_T_SIZE wxSize(500, 500)
 #define SYMBOL_T_POSITION wxDefaultPosition
@@ -117,6 +117,7 @@ public:
   void SendSentence();
   void SetSendBtnLabel();
   void UpdateDataFromVSD(const wxString& sentence);
+  void UpdateDataFromSSD(const wxString& sentence);
   void SetMaxDay();
   wxString GetShipType(int);
   PreferenceDlg* prefDlg;
@@ -189,6 +190,9 @@ class PreferenceDlg : public wxDialog {
 private:
   std::shared_ptr<ObservableListener> aivsd_listener;
   void HandleAIVSD(ObservedEvt ev);
+
+  std::shared_ptr<ObservableListener> aissd_listener;
+  void HandleAISSD(ObservedEvt ev);
 
 protected:
   wxStaticText* m_staticTexthelp;

@@ -35,7 +35,7 @@
 #include "wx/event.h"
 #include "wx/tokenzr.h"
 
-#define ANDROID_DIALOG_BACKGROUND_COLOR wxColour(_T("#7cb0e9"))
+#define ANDROID_DIALOG_BACKGROUND_COLOR wxColour("#7cb0e9")
 // the class factories, used to create and destroy instances of the PlugIn
 
 extern "C" DECL_EXP opencpn_plugin* create_pi(void* ppimgr) {
@@ -142,6 +142,12 @@ void PreferenceDlg::HandleAIVSD(ObservedEvt ev) {
   NMEA0183Id id("AIVSD");
   std::string payload = GetN0183Payload(id, ev);
   m_plugin.UpdateDataFromVSD(wxString::FromUTF8(payload.c_str()));
+}
+
+void PreferenceDlg::HandleAISSD(ObservedEvt ev) {
+  NMEA0183Id id("AISSD");
+  std::string payload = GetN0183Payload(id, ev);
+  m_plugin.UpdateDataFromSSD(wxString::FromUTF8(payload.c_str()));
 }
 
 void aisvd_pi::ShowPreferencesDialog(wxWindow* parent) {
@@ -420,7 +426,7 @@ void aisvd_pi::OnSetupOptions(void) {
   //  Deafult user message if no reply from AIS
   wxString defmsg = _("Yet no answer from any AIS!");
   defmsg.Append("\n" + _("Please check OCPN connections and AIS cabling."));
-  defmsg.Append("\n" + _("See Preferences for more info."));
+  defmsg.Append("\n" + _("See Options->Plugins ais_vd Preferences for more info."));
   m_SendBtn = new wxButton(m_AIS_VoyDataWin, ID_BUTTON1, defmsg,
                            wxDefaultPosition, wxDefaultSize, 0);
   itemBoxSizer1->Add(m_SendBtn, -1, wxEXPAND | wxALL, 5);
@@ -576,47 +582,47 @@ void aisvd_pi::SendSentence() {
 
   if (psw) {
     wxString S;
-    S = _T("$ECSPW");  // EC for Electronic Chart
-    S.Append(_T(","));
-    S.Append(_T("E"));
-    S.Append(_T(","));
-    S.Append(_T("303030"));
-    S.Append(_T(","));
-    S.Append(_T(","));
-    S.Append(_T(","));
-    S.Append(_T("0"));
-    S.Append(_T("*"));  // End data
-    S.Append(wxString::Format(_T("%02X"), ComputeChecksum(S)));
-    S += _T("\r\n");
+    S = "$ECSPW";  // EC for Electronic Chart
+    S.Append(",");
+    S.Append("E");
+    S.Append(",");
+    S.Append("303030");
+    S.Append(",");
+    S.Append(",");
+    S.Append(",");
+    S.Append("0");
+    S.Append("*");  // End data
+    S.Append(wxString::Format("%02X", ComputeChecksum(S)));
+    S += "\r\n";
     // wxPuts(S);
     PushNMEABuffer(S);  // finaly send the password string
   }
 
   wxString S;
-  S = _T("$ECVSD,");  // EC for Electronic Chart
+  S = "$ECVSD,";  // EC for Electronic Chart
   // We dont send ship type. It will be set by AIS static
   // data and can be password protected by some devices
-  S.Append(_T(","));
+  S.Append(",");
   S.Append(m_Draught);
-  S.Append(_T(","));
+  S.Append(",");
   S.Append(m_Persons);
-  S.Append(_T(","));
+  S.Append(",");
   S.Append(m_Destination);
-  S.Append(_T(","));
+  S.Append(",");
   S.Append(
-      wxString::Format(_T("%02d%02d00,"), aisvd_pi::m_pCtrlHour->GetValue(),
+      wxString::Format("%02d%02d00,", aisvd_pi::m_pCtrlHour->GetValue(),
                        aisvd_pi::m_pCtrlMinute->GetValue()));  // eta time HHmm
-  S.Append(wxString::Format(_T("%02d,"),
+  S.Append(wxString::Format("%02d,",
                             aisvd_pi::m_pCtrlDay->GetValue()));  // eta Day
-  S.Append(wxString::Format(_T("%02d,"),
+  S.Append(wxString::Format("%02d,",
                             aisvd_pi::m_pCtrlMonth->GetValue()));  // eta Month
   S.Append(wxString::Format(
-      _T("%d,"), StatusChoice->GetSelection()));  // Navigation status
+      "%d,", StatusChoice->GetSelection()));  // Navigation status
   if (m_cbUseRegionalappl->GetValue()) // Else NULL: Not change use of local HW
-    S.Append(wxString::Format(_T("%d"), m_rbBlueSignStatus->GetSelection()));
-  S.Append(_T("*"));              // End data
-  S.Append(wxString::Format(_T("%02X"), ComputeChecksum(S)));
-  S += _T("\r\n");
+    S.Append(wxString::Format("%d", m_rbBlueSignStatus->GetSelection()));
+  S.Append("*");              // End data
+  S.Append(wxString::Format("%02X", ComputeChecksum(S)));
+  S += "\r\n";
   // wxPuts(S);
   PushNMEABuffer(S);  // finaly send NMEA string
   // Now querry a AIS for updated voyage data
@@ -627,19 +633,43 @@ void aisvd_pi::RequestAISstatus() {
   // Deafult user message if no reply from AIS
   wxString msg = _("Yet no answer from any AIS!");
   msg.Append("\n" + _("Please check OCPN connections and AIS cabling."));
-  msg.Append("\n" + _("See Preferences for more info."));
+  msg.Append("\n" + _("See Options->Plugins ais_vd Preferences for more info."));
 
   m_SendBtn->SetLabel(msg);
   m_AIS_VoyDataWin->Layout();
 
   wxString S;
-  S = _T("$ECAIQ");  // EC for Electronic Chart
-  S.Append(_T(","));
-  S.Append(_T("VSD"));
-  S.Append(_T("*"));
-  S.Append(wxString::Format(_T("%02X"), ComputeChecksum(S)));
-  S += _T("\r\n");
+  // Request SSD for call sign and ship name
+  S = "$ECAIQ";  // EC for Electronic Chart
+  S.Append(",");
+  S.Append("SSD");
+  S.Append("*");
+  S.Append(wxString::Format("%02X", ComputeChecksum(S)));
+  S += "\r\n";
   PushNMEABuffer(S);
+  // Request VSD for voyage data
+  S = "$ECAIQ";  // EC for Electronic Chart
+  S.Append(",");
+  S.Append("VSD");
+  S.Append("*");
+  S.Append(wxString::Format("%02X", ComputeChecksum(S)));
+  S += "\r\n";
+  PushNMEABuffer(S);
+}
+// Collect static data for the replying AIS device to verify it's "our" ship
+wxString shipname, callsign;
+void aisvd_pi::UpdateDataFromSSD(const wxString& sentence) {
+  // Example: $AISSD,SD2779 ,SHIP NAME         ,0,0,0,0,1*7F<0D><0A>
+  wxString shipdata = sentence.Mid(0, sentence.Len() - 2);
+  shipdata.Replace("*", ",");  // Token fails on "*"
+  wxStringTokenizer tkn(shipdata, ",");
+  while (tkn.HasMoreTokens()) {
+    wxString notUse = (tkn.GetNextToken());
+    callsign = tkn.GetNextToken();
+    shipname = tkn.GetNextToken().Trim();
+    shipname.Replace("@", "");
+    break;  // No need for more
+  }
 }
 
 void aisvd_pi::UpdateDataFromVSD(const wxString& sentence) {
@@ -655,10 +685,14 @@ void aisvd_pi::UpdateDataFromVSD(const wxString& sentence) {
   //  2)Maximum present static draught, 0 to 25, 5 m
   //  1) Type of ship and cargo category, 0 to 255
 
-  wxString msg = _("Reply from AIS");
+  wxString msg = _("Reply from a AIS device received");
   wxDateTime now = wxDateTime::Now();  // .MakeUTC();
   msg.Append(
-      wxString::Format(_T(" (%02d:%02d) : "), now.GetHour(), now.GetMinute()));
+      wxString::Format(": %02d:%02d", now.GetHour(), now.GetMinute()));
+
+  if (shipname != "") msg.Append(" \nShip name: " + shipname);
+  if (callsign != "") msg.Append(" Call sign: " + callsign);
+
   wxString nmea = sentence.Mid(0, sentence.Len() - 2);
   nmea.Replace("*", ",");  //   Token fails on "*"
   // Create an understandable user message
@@ -677,10 +711,9 @@ void aisvd_pi::UpdateDataFromVSD(const wxString& sentence) {
   int statusNr = wxAtoi(VSD_Nr[8]);
   wxString status = StatusChoiceStrings[statusNr];
   StatusChoice->SetStringSelection(StatusChoiceStrings[statusNr]);
-  // Clean out possible white space complements in destination
-  wxString dest = VSD_Nr[4];
-  dest.Replace(("  "), wxEmptyString);
-  msg.Append("Values in controls are now updated by AIS status");
+  // Clean out possible trailing white space in destination
+  wxString dest = VSD_Nr[4].Trim();
+  msg.Append(_("Values in the controls are now updated by AIS data"));
   wxString hour = VSD_Nr[5].Mid(0, 2);
   wxString minutes = VSD_Nr[5].Mid(2, 2);
   m_SendBtn->SetLabel(msg);
@@ -691,7 +724,7 @@ void aisvd_pi::UpdateDataFromVSD(const wxString& sentence) {
   m_pCtrlHour->SetValue(wxAtoi(hour));
   m_pCtrlMinute->SetValue(wxAtoi(minutes));
   DraughtTextCtrl->ChangeValue(VSD_Nr[2]);
-  if (VSD_Nr[3] != _T("0") && VSD_Nr[3] != wxEmptyString) {
+  if (VSD_Nr[3] != "0" && VSD_Nr[3] != wxEmptyString) {
     PersonsTextCtrl->ChangeValue(VSD_Nr[3]);
   }
   m_rbBlueSignStatus->SetSelection(wxAtoi(VSD_Nr[9]));
@@ -729,7 +762,7 @@ PreferenceDlg::PreferenceDlg(wxWindow* parent, aisvd_pi& plugin, wxWindowID id,
 
   // Plugin Version
   wxString extVersion;
-  extVersion.Printf(_T("%d.%d.%d"), PLUGIN_VERSION_MAJOR, PLUGIN_VERSION_MINOR,
+  extVersion.Printf("%d.%d.%d", PLUGIN_VERSION_MAJOR, PLUGIN_VERSION_MINOR,
                     PLUGIN_VERSION_PATCH);
 
   wxString versionText = _("Plugin version: ") + extVersion;
@@ -737,14 +770,14 @@ PreferenceDlg::PreferenceDlg(wxWindow* parent, aisvd_pi& plugin, wxWindowID id,
   bSizer2->Add(versionTextBox, 0, wxALL, 20);
 
   wxString helptxt = _("OpenCPN connections help:");
-  helptxt.Append(_T("\n"));
+  helptxt.Append("\n");
   helptxt.Append(
       _("You need both input and output connections for the AIS device."));
   helptxt.Append("\n" +
                  _("To minimize traffic, connection filters may be feasible:"));
   helptxt.Append("\n" + _("For the output filter transmit only VSD and AIQ"));
   helptxt.Append(
-      "\n" + _("For a possible input filter we need at least VSD (and AIVDM + "
+      "\n" + _("For a possible input filter we need at least VSD and SSD. (and AIVDM + "
                "GNSS?)"));
 
   m_staticTexthelp = new wxStaticText(this, wxID_ANY, helptxt,
@@ -756,13 +789,13 @@ PreferenceDlg::PreferenceDlg(wxWindow* parent, aisvd_pi& plugin, wxWindowID id,
 
   m_staticText2 = new wxStaticText(
       this, wxID_ANY,
-      wxT("Type of AIS. So far no options. The future may change that?"),
+      _("Type of AIS. So far no options. The future may change that?"),
       wxDefaultPosition, wxDefaultSize, 0);
   // m_staticText2->Wrap( -1 );
   gSizer2->Add(m_staticText2, 0, wxALL, 20);
 
   wxString m_choice2Choices[] = {
-      wxT("Class A Transponder using NMEA0183 $ECVSD")};
+      _("Class A Transponder using NMEA0183 $ECVSD")};
   int m_choice2NChoices = sizeof(m_choice2Choices) / sizeof(wxString);
   m_choice2 = new wxChoice(this, wxID_ANY, wxDefaultPosition, wxDefaultSize,
                            m_choice2NChoices, m_choice2Choices, 0);
@@ -790,9 +823,15 @@ PreferenceDlg::PreferenceDlg(wxWindow* parent, aisvd_pi& plugin, wxWindowID id,
   wxDEFINE_EVENT(EVT_AIVSD, ObservedEvt);
   aivsd_listener = GetListener(nmea_id, EVT_AIVSD, this);
   Bind(EVT_AIVSD, [&](ObservedEvt ev) { HandleAIVSD(ev); });
+
+  NMEA0183Id ship_id("AISSD");
+  wxDEFINE_EVENT(EVT_AISSD, ObservedEvt);
+  aissd_listener = GetListener(ship_id, EVT_AISSD, this);
+  Bind(EVT_AISSD, [&](ObservedEvt ev) { HandleAISSD(ev); });
 }
 
 PreferenceDlg::~PreferenceDlg() {}
+
 
 void aisvd_pi::OnReadBtnClick(wxCommandEvent& event) {
   RequestAISstatus();
