@@ -130,6 +130,10 @@ public:
 
   aisvd_pi() = default;
 
+  // New public API for Preferences dialog
+  bool GetUseRegionalappl() const { return m_bUseRegionalappl; }
+  void ApplyUseRegionalappl(bool value);
+
 private:
   bool LoadConfig(void);
   // wxWindow         *m_parent_window;
@@ -148,6 +152,9 @@ private:
   wxButton* m_BtnReadAIS;
   wxCheckBox* m_cbUseRegionalappl;
   wxRadioBox* m_rbBlueSignStatus;
+
+  // persisted setting mirror (so Preferences dialog and Options page can share)
+  bool m_bUseRegionalappl = false;
 
   wxFileConfig* m_pconfig;
   ////@begin t member function declarations
@@ -212,6 +219,9 @@ public:
   wxChoice* m_choice2;
   wxStringList m_AIS_type_list;
   aisvd_pi& m_plugin;
+
+  // new preference checkbox (mirrors plugin setting)
+  wxCheckBox* m_pref_cbUseRegionalappl;
 };
 
 #endif

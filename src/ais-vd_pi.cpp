@@ -331,13 +331,15 @@ void aisvd_pi::OnSetupOptions(void) {
 
   m_cbUseRegionalappl = new wxCheckBox(m_AIS_VoyDataWin, ID_TEXTCTRL2,
     _("Control Inland Blue Sign"),wxDefaultPosition, wxDefaultSize,0);
-  m_cbUseRegionalappl->SetValue(false);
+  // Initialize from persisted preference so the Options page reflects the
+  // value set in the Preferences dialog.
+  m_cbUseRegionalappl->SetValue(m_bUseRegionalappl);
   itemFlexGridSizer4->Add(m_cbUseRegionalappl, 0,
     wxALIGN_LEFT | wxALIGN_CENTER_VERTICAL | wxALL, 5);
   m_cbUseRegionalappl->Bind(wxEVT_CHECKBOX, [&](wxCommandEvent& ev) { OnUseBlueSignControl(ev); });
 
-  // For now hide the blue sign option.
-  m_cbUseRegionalappl->Show(false);
+  // Show or hide the blue sign option based on the persisted preference.
+  m_cbUseRegionalappl->Show(m_bUseRegionalappl);
 
   wxString m_rbBlueSignOptions[] = {
       _("Not used"), _("Set not active"), _("Set active")};
@@ -346,7 +348,8 @@ void aisvd_pi::OnSetupOptions(void) {
       wxDefaultSize, 3, m_rbBlueSignOptions, 0, 0);
   itemFlexGridSizer4->Add(m_rbBlueSignStatus, 0,
                           wxALIGN_LEFT | wxALIGN_CENTER_VERTICAL | wxALL, 1);
-  m_rbBlueSignStatus->Show(false);
+  // Mirror visibility to the persisted regional application preference.
+  m_rbBlueSignStatus->Show(m_bUseRegionalappl);
   m_rbBlueSignStatus->Bind(wxEVT_RADIOBOX,
                             [&](wxCommandEvent& ev) { OnAnyValueChange(ev); });
 
@@ -463,6 +466,9 @@ bool aisvd_pi::LoadConfig(void) {
     pConf->Read("Draught", &m_Draught, wxEmptyString);
     pConf->Read("Persons", &m_Persons, wxEmptyString);
     pConf->Read("DestSelections", &m_InitDest);
+
+    // Read persisted blue sign control flag
+    pConf->Read("UseRegionalappl", &m_bUseRegionalappl, false);
   }
 
   return true;
@@ -489,8 +495,31 @@ bool aisvd_pi::SaveConfig(void) {
       m_DestComboBox->Select(0);
       if (size) pConf->Write("DestSelections", destarr);
     }
+    // Persist the blue sign control flag
+    pConf->Write("UseRegionalappl", m_bUseRegionalappl);
   }
   return true;
+}
+
+// Public helper used by Preferences dialog to apply the checkbox value.
+// It updates the internal flag, mirrors the change to the Options page UI if
+// present, invokes the same behavior as toggling the options checkbox, and
+// persists the setting.
+void aisvd_pi::ApplyUseRegionalappl(bool value) {
+  // update internal persisted flag
+  m_bUseRegionalappl = value;
+
+  // If the Options page exists, mirror the change there and invoke the same handler
+  if (m_AIS_VoyDataWin && m_cbUseRegionalappl) {
+    m_cbUseRegionalappl->SetValue(m_bUseRegionalappl);
+    // trigger existing handler to update UI and persist
+    wxCommandEvent ev(wxEVT_CHECKBOX);
+    OnUseBlueSignControl(ev);
+    m_cbUseRegionalappl->Show(m_bUseRegionalappl);
+  } else {
+    // Otherwise persist now
+    SaveConfig();
+  }
 }
 
 void aisvd_pi::OnCloseToolboxPanel(int page_sel, int ok_apply_cancel) {}
@@ -781,8 +810,20 @@ PreferenceDlg::PreferenceDlg(wxWindow* parent, aisvd_pi& plugin, wxWindowID id,
                "GNSS?)"));
 
   m_staticTexthelp = new wxStaticText(this, wxID_ANY, helptxt,
-                                      wxDefaultPosition, wxDefaultSize, 0);
+                                       wxDefaultPosition, wxDefaultSize, 0);
   bSizer2->Add(m_staticTexthelp, 0, wxALL, 20);
+
+  // Add preference checkbox to toggle blue sign control
+  m_pref_cbUseRegionalappl = new wxCheckBox(this, wxID_ANY, _("Control Inland Blue Sign"));
+  // initialize from plugin's persisted flag (use public getter)
+  m_pref_cbUseRegionalappl->SetValue(m_plugin.GetUseRegionalappl());
+  bSizer2->Add(m_pref_cbUseRegionalappl, 0, wxALL, 10);
+
+  // Bind event to reflect changes on the fly - call public API on plugin
+  m_pref_cbUseRegionalappl->Bind(wxEVT_CHECKBOX, [&](wxCommandEvent& ev) {
+    m_plugin.ApplyUseRegionalappl(m_pref_cbUseRegionalappl->GetValue());
+    ev.Skip();
+  });
 
   wxGridSizer* gSizer2;
   gSizer2 = new wxGridSizer(2);
@@ -876,9 +917,18 @@ void aisvd_pi::OnNavStatusSelect(wxCommandEvent& event) {
 }
 
 void aisvd_pi::OnUseBlueSignControl(wxCommandEvent& event) {
-  if (m_cbUseRegionalappl->GetValue()) m_rbBlueSignStatus->Show(true);
+  // Update internal flag from the checkbox control if present
+  if (m_cbUseRegionalappl)
+    m_bUseRegionalappl = m_cbUseRegionalappl->GetValue();
+
+  if (m_cbUseRegionalappl && m_cbUseRegionalappl->GetValue()) m_rbBlueSignStatus->Show(true);
   else m_rbBlueSignStatus->Show(false);
+
   SetSendBtnLabel();
+
+  // Persist the change immediately
+  SaveConfig();
+
   event.Skip();
 }
 
