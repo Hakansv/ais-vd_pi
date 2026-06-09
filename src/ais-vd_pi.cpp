@@ -747,7 +747,7 @@ void aisvd_pi::UpdateDataFromVSD(const wxString& sentence) {
   StatusChoice->SetStringSelection(StatusChoiceStrings[statusNr]);
   // Clean out possible trailing white space in destination
   wxString dest = VSD_Nr[4].Trim();
-  msg.Append(_("Values in the controls are now updated by AIS data"));
+  msg.Append(_("Values in the controls are now updated with data from your AIS device"));
   wxString hour = VSD_Nr[5].Mid(0, 2);
   wxString minutes = VSD_Nr[5].Mid(2, 2);
   m_SendBtn->SetLabel(msg);
