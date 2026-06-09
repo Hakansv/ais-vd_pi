@@ -1,9 +1,10 @@
+#: src\ais-vd_pi.cpp:328 src\ais-vd_pi.cpp:332
 msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-22 17:46+0200\n"
-"PO-Revision-Date: 2023-10-04 18:33\n"
+"POT-Creation-Date: 2026-06-09 20:41+0200\n"
+"PO-Revision-Date: 2026-06-09 18:53\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
@@ -17,235 +18,251 @@ msgstr ""
 "X-Crowdin-File: /plugins/ais-vd_pi/po/ais-vd_pi.pot\n"
 "X-Crowdin-File-ID: 377\n"
 
-#: src\ais-vd_pi.cpp:191
+#: src\ais-vd_pi.cpp:159
 msgid "ais-vd_pi Preferences"
 msgstr "ais-vd_pi beállítások"
 
-#: src\ais-vd_pi.cpp:260
+#: src\ais-vd_pi.cpp:226
 msgid "AIS Voyage data"
 msgstr "AIS menetbeli adatok"
 
-#: src\ais-vd_pi.cpp:267
+#: src\ais-vd_pi.cpp:240
 msgid "Set static voyage data on the AIS class A"
 msgstr "Statikus menetbeli adatok beállítása A osztályú AIS-en"
 
-#: src\ais-vd_pi.cpp:275
+#: src\ais-vd_pi.cpp:249
 msgid "Navigational status"
 msgstr "Navigációs állapot"
 
-#: src\ais-vd_pi.cpp:278
+#: src\ais-vd_pi.cpp:254
 msgid "Underway using engine"
 msgstr "Motorral menetben"
 
-#: src\ais-vd_pi.cpp:279
+#: src\ais-vd_pi.cpp:255
 msgid "At anchor"
 msgstr "Horgonyon"
 
-#: src\ais-vd_pi.cpp:280
+#: src\ais-vd_pi.cpp:256
 msgid "Not under command"
 msgstr "Irányítás nélkül"
 
-#: src\ais-vd_pi.cpp:281
+#: src\ais-vd_pi.cpp:257
 msgid "Restricted manoeuverability"
 msgstr "Korlátozott manőverezőképesség"
 
-#: src\ais-vd_pi.cpp:282
+#: src\ais-vd_pi.cpp:258
 msgid "Constrained by draught"
 msgstr "Merülése miatt korlátozott"
 
-#: src\ais-vd_pi.cpp:283
+#: src\ais-vd_pi.cpp:259
 msgid "Moored"
 msgstr "Kikötve"
 
-#: src\ais-vd_pi.cpp:284
+#: src\ais-vd_pi.cpp:260
 msgid "Aground"
 msgstr "Megfeneklett"
 
-#: src\ais-vd_pi.cpp:285
+#: src\ais-vd_pi.cpp:261
 msgid "Engaged in Fishing"
 msgstr "Halászat folyamatban"
 
-#: src\ais-vd_pi.cpp:286
+#: src\ais-vd_pi.cpp:262
 msgid "Under way sailing"
 msgstr "Menetben vitorlával"
 
-#: src\ais-vd_pi.cpp:298
+#: src\ais-vd_pi.cpp:273
 msgid "Enter destination"
 msgstr "Írd be a célállomást"
 
-#: src\ais-vd_pi.cpp:305
+#: src\ais-vd_pi.cpp:279
 msgid "or select a previous used"
 msgstr "vagy válassz egy előzőleg használtat"
 
-#: src\ais-vd_pi.cpp:325
+#: src\ais-vd_pi.cpp:299
 msgid "Draught (m)"
 msgstr "Merülés (m)"
 
-#: src\ais-vd_pi.cpp:338
+#: src\ais-vd_pi.cpp:313
 msgid "No. of Persons onboard"
 msgstr "Fedélzeten lévők száma"
 
+#: src\ais-vd_pi.cpp:338 src\ais-vd_pi.cpp:822
+msgid "Control Inland Blue Sign"
+msgstr ""
+
 #: src\ais-vd_pi.cpp:350
+msgid "Not used"
+msgstr ""
+
+#: src\ais-vd_pi.cpp:350
+msgid "Set not active"
+msgstr ""
+
+#: src\ais-vd_pi.cpp:350
+msgid "Set active"
+msgstr ""
+
+#: src\ais-vd_pi.cpp:362
 msgid "E.T.A. Date and Time"
 msgstr "ETA dátum és idő"
 
-#: src\ais-vd_pi.cpp:362 src\ais-vd_pi.cpp:687
+#: src\ais-vd_pi.cpp:375
 msgid "Month"
 msgstr "Hónap"
 
-#: src\ais-vd_pi.cpp:372 src\ais-vd_pi.cpp:688
+#: src\ais-vd_pi.cpp:387
 msgid "Day"
 msgstr "Nap"
 
-#: src\ais-vd_pi.cpp:382
+#: src\ais-vd_pi.cpp:398
 msgid "Hour (UTC)"
 msgstr "Óra (UTC)"
 
-#: src\ais-vd_pi.cpp:393
+#: src\ais-vd_pi.cpp:409
 msgid "Minute"
 msgstr "Perc"
 
-#: src\ais-vd_pi.cpp:420 src\ais-vd_pi.cpp:709
-msgid "Send to AIS"
-msgstr "AIS-re küldés"
+#: src\ais-vd_pi.cpp:427
+msgid "Read from AIS"
+msgstr ""
 
-#: src\ais-vd_pi.cpp:431
-msgid "Drop down to select"
-msgstr "Nyisd le a választáshoz"
-
-#: src\ais-vd_pi.cpp:629
+#: src\ais-vd_pi.cpp:435 src\ais-vd_pi.cpp:668
 msgid "Yet no answer from any AIS!"
 msgstr "Még nincs válasz egyik AIS-től sem!"
 
-#: src\ais-vd_pi.cpp:630
+#: src\ais-vd_pi.cpp:436 src\ais-vd_pi.cpp:669
 msgid "Please check OCPN connections and AIS cabling."
 msgstr "Ellenőrizd az OpenCPN capcsolatokat és az AIS kábelezést!"
 
-#: src\ais-vd_pi.cpp:631
-msgid "See Preferences for more info."
-msgstr "Lásd a Beállításokat további információért."
+#: src\ais-vd_pi.cpp:437 src\ais-vd_pi.cpp:670
+msgid "See Options->Plugins ais_vd Preferences for more info."
+msgstr ""
 
-#: src\ais-vd_pi.cpp:660
-msgid "Reply from AIS"
-msgstr "Válasz az AIS-től"
+#: src\ais-vd_pi.cpp:449
+msgid "Drop down to select"
+msgstr "Nyisd le a választáshoz"
 
-#: src\ais-vd_pi.cpp:680
-msgid "Status"
-msgstr "Állapot"
+#: src\ais-vd_pi.cpp:722
+msgid "Reply from a AIS device received"
+msgstr ""
 
-#: src\ais-vd_pi.cpp:685
-msgid "Dest"
-msgstr "Cél"
+#: src\ais-vd_pi.cpp:750
+msgid "Values in the controls are now updated with data from your AIS device"
+msgstr ""
 
-#: src\ais-vd_pi.cpp:686
-msgid "ETA"
-msgstr "ETA (becsült érkezési idő)"
+#: src\ais-vd_pi.cpp:770
+msgid "Send to AIS"
+msgstr "AIS-re küldés"
 
-#: src\ais-vd_pi.cpp:691
-msgid "Time"
-msgstr "Idő"
-
-#: src\ais-vd_pi.cpp:742
+#: src\ais-vd_pi.cpp:802
 msgid "Plugin version: "
 msgstr "Plugin verzió: "
 
-#: src\ais-vd_pi.cpp:746
+#: src\ais-vd_pi.cpp:806
 msgid "OpenCPN connections help:"
 msgstr "OpenCPN kapcsolatok súgó:"
 
-#: src\ais-vd_pi.cpp:748
+#: src\ais-vd_pi.cpp:809
 msgid "You need both input and output connections for the AIS device."
 msgstr "Az AIS eszközhöz.input és az output kapcsolatra is szükség van."
 
-#: src\ais-vd_pi.cpp:749
+#: src\ais-vd_pi.cpp:811
 msgid "To minimize traffic, connection filters may be feasible:"
 msgstr "A forgalom minimalizálására szűrők lehetségesek."
 
-#: src\ais-vd_pi.cpp:750
+#: src\ais-vd_pi.cpp:812
 msgid "For the output filter transmit only VSD and AIQ"
 msgstr "Az output szürőhöz csak VSD és AIQ üzenetet adj."
 
-#: src\ais-vd_pi.cpp:751
-msgid "For a possible input filter we need at least VSD (and AIVDM + GNSS?)"
-msgstr "A lehetséges input szűrőhöz legalább VSD (és AIVDM + GNSS?) üzenet kell."
+#: src\ais-vd_pi.cpp:814
+msgid "For a possible input filter we need at least VSD and SSD. (and AIVDM + GNSS?)"
+msgstr ""
 
-#: src\ais-vd_pi.cpp:846
+#: src\ais-vd_pi.cpp:838
+msgid "Type of AIS. So far no options. The future may change that?"
+msgstr ""
+
+#: src\ais-vd_pi.cpp:844
+msgid "Class A Transponder using NMEA0183 $ECVSD"
+msgstr ""
+
+#: src\ais-vd_pi.cpp:952
 msgid "Wing in ground (WIG)"
 msgstr "Szél a talajszinten"
 
-#: src\ais-vd_pi.cpp:847
+#: src\ais-vd_pi.cpp:954
 msgid "Fishing"
 msgstr "Halászat"
 
-#: src\ais-vd_pi.cpp:848
+#: src\ais-vd_pi.cpp:956
 msgid "Towing"
 msgstr "Vontatás"
 
-#: src\ais-vd_pi.cpp:849
+#: src\ais-vd_pi.cpp:958
 msgid "Towing (Long)"
 msgstr "Hosszú vontatmány"
 
-#: src\ais-vd_pi.cpp:850
+#: src\ais-vd_pi.cpp:960
 msgid "Dredging or underwater ops"
 msgstr "Kotrás vagy víz alatt munka"
 
-#: src\ais-vd_pi.cpp:851
+#: src\ais-vd_pi.cpp:962
 msgid "Diving ops"
 msgstr "Búvár tevékenység"
 
-#: src\ais-vd_pi.cpp:852
+#: src\ais-vd_pi.cpp:964
 msgid "Military ops"
 msgstr "Katonai tevékenység"
 
-#: src\ais-vd_pi.cpp:853
+#: src\ais-vd_pi.cpp:966
 msgid "Sailing vessel"
 msgstr "Vitorlás hajó"
 
-#: src\ais-vd_pi.cpp:854
+#: src\ais-vd_pi.cpp:968
 msgid "Pleasure Craft"
 msgstr "Kedvtelési hajó"
 
-#: src\ais-vd_pi.cpp:859
+#: src\ais-vd_pi.cpp:974
 msgid "High speed craft (HSC)"
 msgstr "Nagysebességű vizijármű (HSC)"
 
-#: src\ais-vd_pi.cpp:860
+#: src\ais-vd_pi.cpp:976
 msgid "Pilot Vessel"
 msgstr "Révkalauz hajó"
 
-#: src\ais-vd_pi.cpp:861
+#: src\ais-vd_pi.cpp:978
 msgid "Search and Rescue vessel"
 msgstr "Mentőhajó"
 
-#: src\ais-vd_pi.cpp:862
+#: src\ais-vd_pi.cpp:980
 msgid "Tug"
 msgstr "Tolóhajó"
 
-#: src\ais-vd_pi.cpp:863
+#: src\ais-vd_pi.cpp:982
 msgid "Port Tender"
 msgstr "kikötői csónak"
 
-#: src\ais-vd_pi.cpp:864
+#: src\ais-vd_pi.cpp:984
 msgid "Law Enforcement"
 msgstr "Bűnüldözés"
 
-#: src\ais-vd_pi.cpp:865
+#: src\ais-vd_pi.cpp:986
 msgid "Medical Transport"
 msgstr "Egészségügyi szállítmány"
 
-#: src\ais-vd_pi.cpp:870
+#: src\ais-vd_pi.cpp:992
 msgid "Passenger ship"
 msgstr "Utasszállító hajó"
 
-#: src\ais-vd_pi.cpp:876
+#: src\ais-vd_pi.cpp:999
 msgid "Cargo ship"
 msgstr "Teherhajó"
 
-#: src\ais-vd_pi.cpp:881
+#: src\ais-vd_pi.cpp:1005
 msgid "Tanker"
 msgstr "Tankhajó"
 
-#: src\ais-vd_pi.cpp:882
+#: src\ais-vd_pi.cpp:1007
 msgid "Other"
 msgstr "Egyéb"
 

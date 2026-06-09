@@ -1,9 +1,10 @@
+#: src\ais-vd_pi.cpp:328 src\ais-vd_pi.cpp:332
 msgid ""
 msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-22 17:46+0200\n"
-"PO-Revision-Date: 2026-03-26 17:45\n"
+"POT-Creation-Date: 2026-06-09 20:41+0200\n"
+"PO-Revision-Date: 2026-06-09 18:53\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -17,235 +18,251 @@ msgstr ""
 "X-Crowdin-File: /plugins/ais-vd_pi/po/ais-vd_pi.pot\n"
 "X-Crowdin-File-ID: 377\n"
 
-#: src\ais-vd_pi.cpp:191
+#: src\ais-vd_pi.cpp:159
 msgid "ais-vd_pi Preferences"
 msgstr "Preferencje ais-vd_pi"
 
-#: src\ais-vd_pi.cpp:260
+#: src\ais-vd_pi.cpp:226
 msgid "AIS Voyage data"
 msgstr "Dane Rejsu AIS"
 
-#: src\ais-vd_pi.cpp:267
+#: src\ais-vd_pi.cpp:240
 msgid "Set static voyage data on the AIS class A"
 msgstr "Ustaw stałe dane rejsu w AIS klasy A"
 
-#: src\ais-vd_pi.cpp:275
+#: src\ais-vd_pi.cpp:249
 msgid "Navigational status"
 msgstr "Status nawigacyjny"
 
-#: src\ais-vd_pi.cpp:278
+#: src\ais-vd_pi.cpp:254
 msgid "Underway using engine"
 msgstr "W drodze na silniku"
 
-#: src\ais-vd_pi.cpp:279
+#: src\ais-vd_pi.cpp:255
 msgid "At anchor"
 msgstr "Na kotwicy"
 
-#: src\ais-vd_pi.cpp:280
+#: src\ais-vd_pi.cpp:256
 msgid "Not under command"
 msgstr "Nieodpowiadający za swoje ruchy"
 
-#: src\ais-vd_pi.cpp:281
+#: src\ais-vd_pi.cpp:257
 msgid "Restricted manoeuverability"
 msgstr "ograniczona zdolność manewrowa"
 
-#: src\ais-vd_pi.cpp:282
+#: src\ais-vd_pi.cpp:258
 msgid "Constrained by draught"
 msgstr "Ograniczony swoim zanurzeniem"
 
-#: src\ais-vd_pi.cpp:283
+#: src\ais-vd_pi.cpp:259
 msgid "Moored"
 msgstr "zacumowany"
 
-#: src\ais-vd_pi.cpp:284
+#: src\ais-vd_pi.cpp:260
 msgid "Aground"
 msgstr "na mieliźnie"
 
-#: src\ais-vd_pi.cpp:285
+#: src\ais-vd_pi.cpp:261
 msgid "Engaged in Fishing"
 msgstr "zajęty połowem"
 
-#: src\ais-vd_pi.cpp:286
+#: src\ais-vd_pi.cpp:262
 msgid "Under way sailing"
 msgstr "w drodze pod żaglami"
 
-#: src\ais-vd_pi.cpp:298
+#: src\ais-vd_pi.cpp:273
 msgid "Enter destination"
 msgstr "Podaj cel podróży"
 
-#: src\ais-vd_pi.cpp:305
+#: src\ais-vd_pi.cpp:279
 msgid "or select a previous used"
 msgstr "lub wybierz poprzednio używane"
 
-#: src\ais-vd_pi.cpp:325
+#: src\ais-vd_pi.cpp:299
 msgid "Draught (m)"
 msgstr "Zanurzenie (m)"
 
-#: src\ais-vd_pi.cpp:338
+#: src\ais-vd_pi.cpp:313
 msgid "No. of Persons onboard"
 msgstr "Liczba osób na pokładzie"
 
+#: src\ais-vd_pi.cpp:338 src\ais-vd_pi.cpp:822
+msgid "Control Inland Blue Sign"
+msgstr ""
+
 #: src\ais-vd_pi.cpp:350
+msgid "Not used"
+msgstr ""
+
+#: src\ais-vd_pi.cpp:350
+msgid "Set not active"
+msgstr ""
+
+#: src\ais-vd_pi.cpp:350
+msgid "Set active"
+msgstr ""
+
+#: src\ais-vd_pi.cpp:362
 msgid "E.T.A. Date and Time"
 msgstr "Data i czas przewidywanego czasu przybycia (ETA)"
 
-#: src\ais-vd_pi.cpp:362 src\ais-vd_pi.cpp:687
+#: src\ais-vd_pi.cpp:375
 msgid "Month"
 msgstr "Miesiąc"
 
-#: src\ais-vd_pi.cpp:372 src\ais-vd_pi.cpp:688
+#: src\ais-vd_pi.cpp:387
 msgid "Day"
 msgstr "Dzień"
 
-#: src\ais-vd_pi.cpp:382
+#: src\ais-vd_pi.cpp:398
 msgid "Hour (UTC)"
 msgstr "Godzina (UTC)"
 
-#: src\ais-vd_pi.cpp:393
+#: src\ais-vd_pi.cpp:409
 msgid "Minute"
 msgstr "Minuta"
 
-#: src\ais-vd_pi.cpp:420 src\ais-vd_pi.cpp:709
-msgid "Send to AIS"
-msgstr "Wyślij do AIS"
+#: src\ais-vd_pi.cpp:427
+msgid "Read from AIS"
+msgstr ""
 
-#: src\ais-vd_pi.cpp:431
-msgid "Drop down to select"
-msgstr "Rozwiń by wybrać"
-
-#: src\ais-vd_pi.cpp:629
+#: src\ais-vd_pi.cpp:435 src\ais-vd_pi.cpp:668
 msgid "Yet no answer from any AIS!"
 msgstr "Wciąż brak odzewu jakiegoś AIS"
 
-#: src\ais-vd_pi.cpp:630
+#: src\ais-vd_pi.cpp:436 src\ais-vd_pi.cpp:669
 msgid "Please check OCPN connections and AIS cabling."
 msgstr "Proszę sprawdzić połączenia openCPN i okablowanie AIS."
 
-#: src\ais-vd_pi.cpp:631
-msgid "See Preferences for more info."
-msgstr "Zobacz Preferencje aby uzyskać więcej informacji."
+#: src\ais-vd_pi.cpp:437 src\ais-vd_pi.cpp:670
+msgid "See Options->Plugins ais_vd Preferences for more info."
+msgstr ""
 
-#: src\ais-vd_pi.cpp:660
-msgid "Reply from AIS"
-msgstr "Odpowiedź z AIS"
+#: src\ais-vd_pi.cpp:449
+msgid "Drop down to select"
+msgstr "Rozwiń by wybrać"
 
-#: src\ais-vd_pi.cpp:680
-msgid "Status"
-msgstr "Status"
+#: src\ais-vd_pi.cpp:722
+msgid "Reply from a AIS device received"
+msgstr ""
 
-#: src\ais-vd_pi.cpp:685
-msgid "Dest"
-msgstr "Cel"
+#: src\ais-vd_pi.cpp:750
+msgid "Values in the controls are now updated with data from your AIS device"
+msgstr ""
 
-#: src\ais-vd_pi.cpp:686
-msgid "ETA"
-msgstr "ETA"
+#: src\ais-vd_pi.cpp:770
+msgid "Send to AIS"
+msgstr "Wyślij do AIS"
 
-#: src\ais-vd_pi.cpp:691
-msgid "Time"
-msgstr "Czas"
-
-#: src\ais-vd_pi.cpp:742
+#: src\ais-vd_pi.cpp:802
 msgid "Plugin version: "
 msgstr "Wersja wtyczki: "
 
-#: src\ais-vd_pi.cpp:746
+#: src\ais-vd_pi.cpp:806
 msgid "OpenCPN connections help:"
 msgstr "Pomoc dla połączeń OpenCPN:"
 
-#: src\ais-vd_pi.cpp:748
+#: src\ais-vd_pi.cpp:809
 msgid "You need both input and output connections for the AIS device."
 msgstr "Potrzebujesz zarówno połączeń wejściowych, jak i wyjściowych do urządzenia AIS."
 
-#: src\ais-vd_pi.cpp:749
+#: src\ais-vd_pi.cpp:811
 msgid "To minimize traffic, connection filters may be feasible:"
 msgstr "Aby zminimalizować natężenie ruchu obiektów, można użyć filtrów połączeń:"
 
-#: src\ais-vd_pi.cpp:750
+#: src\ais-vd_pi.cpp:812
 msgid "For the output filter transmit only VSD and AIQ"
 msgstr "Dla filtra wyjściowego transmisja tylko VSD i AIQ"
 
-#: src\ais-vd_pi.cpp:751
-msgid "For a possible input filter we need at least VSD (and AIVDM + GNSS?)"
-msgstr "Dla ewentualnego filtra wejściowego potrzebujemy co najmniej VSD (i AIVDM + GNSS?)"
+#: src\ais-vd_pi.cpp:814
+msgid "For a possible input filter we need at least VSD and SSD. (and AIVDM + GNSS?)"
+msgstr ""
 
-#: src\ais-vd_pi.cpp:846
+#: src\ais-vd_pi.cpp:838
+msgid "Type of AIS. So far no options. The future may change that?"
+msgstr ""
+
+#: src\ais-vd_pi.cpp:844
+msgid "Class A Transponder using NMEA0183 $ECVSD"
+msgstr ""
+
+#: src\ais-vd_pi.cpp:952
 msgid "Wing in ground (WIG)"
 msgstr "Ekranoplan (WIG)"
 
-#: src\ais-vd_pi.cpp:847
+#: src\ais-vd_pi.cpp:954
 msgid "Fishing"
 msgstr "Połów"
 
-#: src\ais-vd_pi.cpp:848
+#: src\ais-vd_pi.cpp:956
 msgid "Towing"
 msgstr "Holowanie"
 
-#: src\ais-vd_pi.cpp:849
+#: src\ais-vd_pi.cpp:958
 msgid "Towing (Long)"
 msgstr ""
 
-#: src\ais-vd_pi.cpp:850
+#: src\ais-vd_pi.cpp:960
 msgid "Dredging or underwater ops"
 msgstr "Pogłębianie lub prace podwodne"
 
-#: src\ais-vd_pi.cpp:851
+#: src\ais-vd_pi.cpp:962
 msgid "Diving ops"
 msgstr "Operacja nurkowa"
 
-#: src\ais-vd_pi.cpp:852
+#: src\ais-vd_pi.cpp:964
 msgid "Military ops"
 msgstr "Operacje wojskowe"
 
-#: src\ais-vd_pi.cpp:853
+#: src\ais-vd_pi.cpp:966
 msgid "Sailing vessel"
 msgstr "Statek żaglowy"
 
-#: src\ais-vd_pi.cpp:854
+#: src\ais-vd_pi.cpp:968
 msgid "Pleasure Craft"
 msgstr "Łódź rekreacyjna"
 
-#: src\ais-vd_pi.cpp:859
+#: src\ais-vd_pi.cpp:974
 msgid "High speed craft (HSC)"
 msgstr "Jednostka szybka (HSC)"
 
-#: src\ais-vd_pi.cpp:860
+#: src\ais-vd_pi.cpp:976
 msgid "Pilot Vessel"
 msgstr "Pilotówka"
 
-#: src\ais-vd_pi.cpp:861
+#: src\ais-vd_pi.cpp:978
 msgid "Search and Rescue vessel"
 msgstr "Statek SAR"
 
-#: src\ais-vd_pi.cpp:862
+#: src\ais-vd_pi.cpp:980
 msgid "Tug"
 msgstr "Holownik"
 
-#: src\ais-vd_pi.cpp:863
+#: src\ais-vd_pi.cpp:982
 msgid "Port Tender"
 msgstr "Portowa jednostka pomocnicza"
 
-#: src\ais-vd_pi.cpp:864
+#: src\ais-vd_pi.cpp:984
 msgid "Law Enforcement"
 msgstr "Egzekwowanie prawa"
 
-#: src\ais-vd_pi.cpp:865
+#: src\ais-vd_pi.cpp:986
 msgid "Medical Transport"
 msgstr "Transport medyczny"
 
-#: src\ais-vd_pi.cpp:870
+#: src\ais-vd_pi.cpp:992
 msgid "Passenger ship"
 msgstr "Statek pasażerski"
 
-#: src\ais-vd_pi.cpp:876
+#: src\ais-vd_pi.cpp:999
 msgid "Cargo ship"
 msgstr "Statek towarowy"
 
-#: src\ais-vd_pi.cpp:881
+#: src\ais-vd_pi.cpp:1005
 msgid "Tanker"
 msgstr "Tankowiec"
 
-#: src\ais-vd_pi.cpp:882
+#: src\ais-vd_pi.cpp:1007
 msgid "Other"
 msgstr "Inny"
 
