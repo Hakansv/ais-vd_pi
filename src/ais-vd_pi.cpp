@@ -35,6 +35,11 @@
 #include "wx/event.h"
 #include "wx/tokenzr.h"
 
+#include <wx/event.h>
+// Define events exactly once at global scope
+wxDEFINE_EVENT(EVT_AIVSD, ObservedEvt);
+wxDEFINE_EVENT(EVT_AISSD, ObservedEvt);
+
 #define ANDROID_DIALOG_BACKGROUND_COLOR wxColour("#7cb0e9")
 // the class factories, used to create and destroy instances of the PlugIn
 
@@ -871,7 +876,12 @@ PreferenceDlg::PreferenceDlg(wxWindow* parent, aisvd_pi& plugin, wxWindowID id,
   Bind(EVT_AISSD, [&](ObservedEvt ev) { HandleAISSD(ev); });
 }
 
-PreferenceDlg::~PreferenceDlg() {}
+PreferenceDlg::~PreferenceDlg() {
+  // Ensure listeners are released when the dialog is destroyed to avoid
+  // leaving platform-specific registrations active on shutdown.
+  if (aivsd_listener) aivsd_listener.reset();
+  if (aissd_listener) aissd_listener.reset();
+}
 
 
 void aisvd_pi::OnReadBtnClick(wxCommandEvent& event) {
