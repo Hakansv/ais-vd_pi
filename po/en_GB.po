@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-09 20:41+0200\n"
-"PO-Revision-Date: 2026-06-09 18:53\n"
+"PO-Revision-Date: 2026-08-10 12:47\n"
 "Last-Translator: \n"
 "Language-Team: English, United Kingdom\n"
 "Language: en_GB\n"
@@ -88,19 +88,19 @@ msgstr "No. of Persons onboard"
 
 #: src\ais-vd_pi.cpp:338 src\ais-vd_pi.cpp:822
 msgid "Control Inland Blue Sign"
-msgstr ""
+msgstr "Control Inland Blue Sign"
 
 #: src\ais-vd_pi.cpp:350
 msgid "Not used"
-msgstr ""
+msgstr "Not used"
 
 #: src\ais-vd_pi.cpp:350
 msgid "Set not active"
-msgstr ""
+msgstr "Set not active"
 
 #: src\ais-vd_pi.cpp:350
 msgid "Set active"
-msgstr ""
+msgstr "Set active"
 
 #: src\ais-vd_pi.cpp:362
 msgid "E.T.A. Date and Time"
@@ -124,7 +124,7 @@ msgstr "Minute"
 
 #: src\ais-vd_pi.cpp:427
 msgid "Read from AIS"
-msgstr ""
+msgstr "Read from AIS"
 
 #: src\ais-vd_pi.cpp:435 src\ais-vd_pi.cpp:668
 msgid "Yet no answer from any AIS!"
@@ -136,7 +136,7 @@ msgstr "Please check OCPN connections and AIS cabling."
 
 #: src\ais-vd_pi.cpp:437 src\ais-vd_pi.cpp:670
 msgid "See Options->Plugins ais_vd Preferences for more info."
-msgstr ""
+msgstr "See Options->Plugins ais_vd Preferences for more info."
 
 #: src\ais-vd_pi.cpp:449
 msgid "Drop down to select"
@@ -144,11 +144,11 @@ msgstr "Drop down to select"
 
 #: src\ais-vd_pi.cpp:722
 msgid "Reply from a AIS device received"
-msgstr ""
+msgstr "Reply from a AIS device received"
 
 #: src\ais-vd_pi.cpp:750
 msgid "Values in the controls are now updated with data from your AIS device"
-msgstr ""
+msgstr "Values in the controls are now updated with data from your AIS device"
 
 #: src\ais-vd_pi.cpp:770
 msgid "Send to AIS"
@@ -176,15 +176,15 @@ msgstr "For the output filter transmit only VSD and AIQ"
 
 #: src\ais-vd_pi.cpp:814
 msgid "For a possible input filter we need at least VSD and SSD. (and AIVDM + GNSS?)"
-msgstr ""
+msgstr "For a possible input filter we need at least VSD and SSD. (and AIVDM + GNSS?)"
 
 #: src\ais-vd_pi.cpp:838
 msgid "Type of AIS. So far no options. The future may change that?"
-msgstr ""
+msgstr "Type of AIS. So far no options. The future may change that?"
 
 #: src\ais-vd_pi.cpp:844
 msgid "Class A Transponder using NMEA0183 $ECVSD"
-msgstr ""
+msgstr "Class A Transponder using NMEA0183 $ECVSD"
 
 #: src\ais-vd_pi.cpp:952
 msgid "Wing in ground (WIG)"

@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-09 20:41+0200\n"
-"PO-Revision-Date: 2026-06-09 18:53\n"
+"PO-Revision-Date: 2026-09-29 18:33\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -180,7 +180,7 @@ msgstr ""
 
 #: src\ais-vd_pi.cpp:838
 msgid "Type of AIS. So far no options. The future may change that?"
-msgstr ""
+msgstr "Art des AIS. Bisher keine Optionen. Das könnte sich in Zukunft ändern?"
 
 #: src\ais-vd_pi.cpp:844
 msgid "Class A Transponder using NMEA0183 $ECVSD"

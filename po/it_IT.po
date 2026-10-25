@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: opencpn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-09 20:41+0200\n"
-"PO-Revision-Date: 2026-06-09 18:53\n"
+"PO-Revision-Date: 2026-08-10 12:47\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -92,15 +92,15 @@ msgstr ""
 
 #: src\ais-vd_pi.cpp:350
 msgid "Not used"
-msgstr ""
+msgstr "Non utilizzato"
 
 #: src\ais-vd_pi.cpp:350
 msgid "Set not active"
-msgstr ""
+msgstr "Imposta non attivo"
 
 #: src\ais-vd_pi.cpp:350
 msgid "Set active"
-msgstr ""
+msgstr "Imposta come attivo"
 
 #: src\ais-vd_pi.cpp:362
 msgid "E.T.A. Date and Time"
@@ -124,7 +124,7 @@ msgstr "Minuto"
 
 #: src\ais-vd_pi.cpp:427
 msgid "Read from AIS"
-msgstr ""
+msgstr "Leggi da AIS"
 
 #: src\ais-vd_pi.cpp:435 src\ais-vd_pi.cpp:668
 msgid "Yet no answer from any AIS!"
@@ -136,7 +136,7 @@ msgstr "Controllare le connessioni OCPN e il cablaggio AIS."
 
 #: src\ais-vd_pi.cpp:437 src\ais-vd_pi.cpp:670
 msgid "See Options->Plugins ais_vd Preferences for more info."
-msgstr ""
+msgstr "Vedere Opzioni->Preferenze ais_vd Plugins per ulteriori informazioni."
 
 #: src\ais-vd_pi.cpp:449
 msgid "Drop down to select"
@@ -144,11 +144,11 @@ msgstr "A discesa per selezionare"
 
 #: src\ais-vd_pi.cpp:722
 msgid "Reply from a AIS device received"
-msgstr ""
+msgstr "Risposta da un dispositivo AIS ricevuto"
 
 #: src\ais-vd_pi.cpp:750
 msgid "Values in the controls are now updated with data from your AIS device"
-msgstr ""
+msgstr "I valori nei controlli sono ora aggiornati con i dati dal tuo dispositivo AIS"
 
 #: src\ais-vd_pi.cpp:770
 msgid "Send to AIS"
@@ -176,15 +176,15 @@ msgstr "Per il filtro di uscita trasmettere solo VSD e AIQ"
 
 #: src\ais-vd_pi.cpp:814
 msgid "For a possible input filter we need at least VSD and SSD. (and AIVDM + GNSS?)"
-msgstr ""
+msgstr "Per un possibile filtro di input abbiamo bisogno di almeno VSD e SSD. (e AIVDM + GNSS?)"
 
 #: src\ais-vd_pi.cpp:838
 msgid "Type of AIS. So far no options. The future may change that?"
-msgstr ""
+msgstr "Tipo di AIS. Finora nessuna opzione. In futuro potrebbe cambiare?"
 
 #: src\ais-vd_pi.cpp:844
 msgid "Class A Transponder using NMEA0183 $ECVSD"
-msgstr ""
+msgstr "Transponder di classe A che utilizza NMEA0183 $ECVSD"
 
 #: src\ais-vd_pi.cpp:952
 msgid "Wing in ground (WIG)"
