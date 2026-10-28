@@ -128,6 +128,6 @@ modules:
 # -#  runtime: org.opencpn.OpenCPN
 # -# -runtime-version: beta   # FIXME(alec) Revert to stable when updated to 22.08
 # -# +runtime-version: stable
-# -#  sdk: org.freedesktop.Sdk//22.08
+# -#  sdk: org.freedesktop.Sdk//24.08
 # -#  build-extension: true
 # -#  separate-locales: false
